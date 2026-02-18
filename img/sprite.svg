@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; width: 0; height: 0; clip: rect(0 0 0 0);">
+    <symbol id="arrow-long" viewBox="0 0 251 15">
+        <path d="M250.707 8.07112C251.098 7.6806 251.098 7.04743 250.707 6.65691L244.343 0.292946C243.953 -0.0975785 243.319 -0.0975785 242.929 0.292946C242.538 0.68347 242.538 1.31664 242.929 1.70716L248.586 7.36401L242.929 13.0209C242.538 13.4114 242.538 14.0446 242.929 14.4351C243.319 14.8256 243.953 14.8256 244.343 14.4351L250.707 8.07112ZM0 7.36401V8.36401H250V7.36401V6.36401H0V7.36401Z"/>
+    </symbol>
+    <symbol id="slider-arrow-next" viewBox="0 0 24 24">
+        <path d="M5 12H19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 5L19 12L12 19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="slider-arrow-prev" viewBox="0 0 24 24">
+        <path d="M19 12H5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 5L5 12L12 19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+</svg>
