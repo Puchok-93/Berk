@@ -44,5 +44,8 @@
         <path d="M41 1H1" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M41 25L1 25" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
-
+    <symbol id="icon-cross" viewBox="0 0 32 33">
+        <path d="M30.8169 30.7335L0.916016 1.07742" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M30.9155 1.42137L1.01465 31.0774" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 </svg>
