@@ -10,4 +10,39 @@
         <path d="M19 12H5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         <path d="M12 5L5 12L12 19" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
+    <symbol id="icon-cart" viewBox="0 0 29 28">
+        <path d="M12 26C12.5523 26 13 25.5523 13 25C13 24.4477 12.5523 24 12 24C11.4477 24 11 24.4477 11 25C11 25.5523 11.4477 26 12 26Z" stroke="#443F3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M23 26C23.5523 26 24 25.5523 24 25C24 24.4477 23.5523 24 23 24C22.4477 24 22 24.4477 22 25C22 25.5523 22.4477 26 23 26Z" stroke="#443F3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 1H5.90909L9.19818 17.9603C9.31041 18.5434 9.6178 19.0672 10.0665 19.4401C10.5153 19.8129 11.0768 20.0109 11.6527 19.9995H23.5818C24.1578 20.0109 24.7193 19.8129 25.168 19.4401C25.6168 19.0672 25.9241 18.5434 26.0364 17.9603L28 7.33318H7.13636" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-compare" viewBox="0 0 20 25">
+        <g clip-path="url(#clip0_8261_140)">
+            <path d="M18.5713 23.6111V9.72223" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 23.6111V1.38889" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.42871 23.6111V15.2778" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <defs>
+            <clipPath id="clip0_8261_140">
+                <rect width="20" height="25" fill="white"/>
+            </clipPath>
+        </defs>
+    </symbol>
+    <symbol id="icon-favorite" viewBox="0 0 28 25">
+        <path d="M24.9952 3.03337C24.3599 2.38873 23.6056 1.87736 22.7754 1.52847C21.9451 1.17958 21.0553 1 20.1566 1C19.258 1 18.3681 1.17958 17.5379 1.52847C16.7077 1.87736 15.9534 2.38873 15.3181 3.03337L13.9997 4.37059L12.6812 3.03337C11.398 1.73186 9.65749 1.00067 7.84269 1.00067C6.0279 1.00067 4.28743 1.73186 3.00418 3.03337C1.72092 4.33488 1 6.1001 1 7.94072C1 9.78133 1.72092 11.5466 3.00418 12.8481L4.32264 14.1853L13.9997 24L23.6767 14.1853L24.9952 12.8481C25.6307 12.2037 26.1349 11.4387 26.4789 10.5967C26.8229 9.75467 27 8.85216 27 7.94072C27 7.02928 26.8229 6.12677 26.4789 5.28475C26.1349 4.44273 25.6307 3.6777 24.9952 3.03337Z" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-login" viewBox="0 0 23 26">
+        <path d="M22 25V22.3333C22 20.9188 21.4469 19.5623 20.4623 18.5621C19.4777 17.5619 18.1424 17 16.75 17H6.25C4.85761 17 3.52226 17.5619 2.53769 18.5621C1.55312 19.5623 1 20.9188 1 22.3333V25" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11.5 12C14.5376 12 17 9.53757 17 6.5C17 3.46243 14.5376 1 11.5 1C8.46243 1 6 3.46243 6 6.5C6 9.53757 8.46243 12 11.5 12Z" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-search" viewBox="0 0 24 24">
+        <path d="M10.7308 20.4615C16.1049 20.4615 20.4615 16.1049 20.4615 10.7308C20.4615 5.35661 16.1049 1 10.7308 1C5.35661 1 1 5.35661 1 10.7308C1 16.1049 5.35661 20.4615 10.7308 20.4615Z" stroke="#878378" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22.2307 22.2308L17.8076 17.8077" stroke="#878378" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="icon-burger" viewBox="0 0 42 26">
+        <path d="M41 17L1 17" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M41 9L1 9" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M41 1H1" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M41 25L1 25" stroke="#443F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
 </svg>

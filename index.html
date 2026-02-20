@@ -6,13 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nordic Comfort</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/swiper-controls.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
 />
 </head>
 
 <body>
+    <!-- Header -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-content">
+                <a class="header-logo" href="/">
+                    <img src="img/footer-logo.svg" alt="">
+                </a>
+                <div class="header-search">
+                    <form class="header-search-form" action="/search/">
+                        <input class="header-search-form__input" type="text" placeholder="Наушники Sony..." name="q" value="" id="top-search-line" autocomplete="off">
+                        <button class="header-search-form__btn" aria-label="Найти" type="submit">
+                            <svg class="header-search-form__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="header-contacts">
+                    <a class="header-contacts__contact" href="mailto:info@nordic-comfort.com">info@nordic-comfort.com</a>
+                    <a class="header-contacts__contact" href="tel:+10000000000">+1 000 000-00-00</a>
+                </div>
+                <div class="header-controls">
+                    <div class="compare">
+                        <a class="compare__link" href="/personal/compare">
+                            <svg class="compare__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-compare"></use>
+                            </svg>
+                        </a>
+                        <div class="compare__value">2</div>
+                    </div>
+                    <div class="favorite">
+                        <a class="favorite__link" href="/personal/favorite">
+                            <svg class="favorite__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                            </svg>
+                        </a>
+                        <div class="favorite__value">2</div>
+                    </div>
+                    <div class="login">
+                        <a class="login__link" href="/personal/favorite">
+                            <svg class="login__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-login"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="cart">
+                        <a class="cart__link" href="/personal/cart">
+                            <svg class="cart__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-cart"></use>
+                            </svg>
+                        </a>
+                        <div class="cart__value">2</div>
+                    </div>
+                </div>
+                <button class="burger-btn" type="button">
+                    <svg class="burger-btn__icon icon">
+                        <use xlink:href="img/sprite.svg#icon-burger"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
 
+    <!-- Содержимое страницы -->
     <main class="main-page">
+        <!-- Main Screen -->
+        <section class="main-screen">
+            <div class="wrapper wrapper--main-screen">
+                <h1 class="main-screen__title">Nordic Comfort</h1>
+                <div class="main-screen-content">
+                    <div class="main-screen-content-img">
+                        <img src="img/main-screen-img.png" alt="">
+                    </div>
+                    <div class="main-screen-content-info">
+                        <p class="main-screen-content-info__text">
+                            these are not just pieces of furniture, but true works of art designed for maximum comfort. 
+                            each chair is tailored to your body shape, allowing you to enjoy music for 
+                            hours without getting tired.
+                        </p>
+                        <a class="main-screen-content-info__link catalog-link" href="#">
+                            go to the catalog
+                            <svg class="catalog-link__icon icon" viewBox="0 0 251 15">
+                                <use xlink:href="img/sprite.svg#arrow-long"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- About Company -->
         <section class="about-company-section">
             <div class="wrapper">
@@ -168,7 +259,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="reviews-slider-controls">
+                    <div class="swiper-controls reviews-slider-controls">
                         <div class="reviews-slider-controls__control swiper-button-next">
                             <svg class="reviews-slider-controls__icon icon" viewBox="0 0 24 24">
                                 <use xlink:href="img/sprite.svg#slider-arrow-next"></use>
@@ -227,59 +318,198 @@
         <!-- News -->
         <section class="news-section">
             <div class="wrapper">
-                <h2 class="news-section__title">News</h2>
+                <h2 class="section-title news-section__title">News</h2>
                 <div id="news-slider" class="news-slider swiper">
                     <div class="swiper-wrapper">
                         <!-- News 1 -->
                         <div class="swiper-slide news-item">
-                            <a href="#">
+                            <a class="news-item__link" href="#">
                                 <div class="news-item__image">
-                                    <img src="img/popular-products/popular-product-1.jpg" alt="">
+                                    <img src="img/test.jpg" alt="">
                                 </div>
-                                <h3 class="news-item__title">New Title</h3>
+                                <h3 class="news-item__title">Статья 1</h3>
                             </a>
                         </div>
                         <!-- News 2 -->
                         <div class="swiper-slide news-item">
-                            <a href="#">
+                            <a class="news-item__link" href="#">
                                 <div class="news-item__image">
                                     <img src="img/popular-products/popular-product-1.jpg" alt="">
                                 </div>
-                                <h3 class="news-item__title">New Title</h3>
+                                <h3 class="news-item__title">Статья 2</h3>
                             </a>
                         </div>
                         <!-- News 3 -->
                         <div class="swiper-slide news-item">
-                            <a href="#">
+                            <a class="news-item__link" href="#">
                                 <div class="news-item__image">
                                     <img src="img/popular-products/popular-product-1.jpg" alt="">
                                 </div>
-                                <h3 class="news-item__title">New Title</h3>
+                                <h3 class="news-item__title">Статья 3</h3>
                             </a>
                         </div>
                         <!-- News 4 -->
                         <div class="swiper-slide news-item">
-                            <a href="#">
+                            <a class="news-item__link" href="#">
                                 <div class="news-item__image">
                                     <img src="img/popular-products/popular-product-1.jpg" alt="">
                                 </div>
-                                <h3 class="news-item__title">New Title</h3>
+                                <h3 class="news-item__title">Статья 4</h3>
                             </a>
                         </div>
                         <!-- News 5 -->
                         <div class="swiper-slide news-item">
-                            <a href="#">
+                            <a class="news-item__link" href="#">
                                 <div class="news-item__image">
                                     <img src="img/popular-products/popular-product-1.jpg" alt="">
                                 </div>
-                                <h3 class="news-item__title">New Title</h3>
+                                <h3 class="news-item__title">Статья 5</h3>
+                            </a>
+                        </div>
+                        <!-- News 6 -->
+                        <div class="swiper-slide news-item">
+                            <a class="news-item__link" href="#">
+                                <div class="news-item__image">
+                                    <img src="img/popular-products/popular-product-1.jpg" alt="">
+                                </div>
+                                <h3 class="news-item__title">Статья 6</h3>
+                            </a>
+                        </div>
+                        <!-- News 7  -->
+                        <div class="swiper-slide news-item">
+                            <a class="news-item__link" href="#">
+                                <div class="news-item__image">
+                                    <img src="img/popular-products/popular-product-1.jpg" alt="">
+                                </div>
+                                <h3 class="news-item__title">Статья 7</h3>
                             </a>
                         </div>
                     </div>
+                    <div class="swiper-controls news-slider-controls">
+                        <div class="news-slider-controls__control swiper-button-next">
+                            <svg class="news-slider-controls__icon icon" viewBox="0 0 24 24">
+                                <use xlink:href="img/sprite.svg#slider-arrow-next"></use>
+                            </svg>
+                        </div>
+                        <div class="news-slider-controls__control swiper-button-prev">
+                            <svg class="news-slider-controls__icon icon" viewBox="0 0 24 24">
+                                <use xlink:href="img/sprite.svg#slider-arrow-prev"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <a class="footer-logo" href="/">
+                    <img src="img/footer-logo.svg" alt="">
+                </a>
+                <!-- Navigation -->
+                <div class="footer-navigation">
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Каталог</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">О компании</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Бренды</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Отзывы</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Производство</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Новости</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Реквизиты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Контакты</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">+7 (000) 000-00-00</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">example@gmail.com</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Address</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Social -->
+                <div class="footer-social">
+                    <ul class="footer-social-list">
+                        <li class="footer-social-list__item">
+                            <a class="footer-social-list__link" href="#" target="_blank">
+                                <img class="footer-social-list__icon" src="" alt="" >
+                            </a>
+                        </li>
+                        <li class="footer-social-list__item">
+                            <a class="footer-social-list__link" href="#" target="_blank">
+                                <img class="footer-social-list__icon" src="" alt="" >
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Subscribe -->
+                <div class="footer-subscribe">
+                    <h2 class="footer-subscribe__title">Follow our news</h2>
+                    <form class="footer-form-subscribe" action="post">
+                        <input class="footer-form-subscribe__input" type="text" placeholder="e-mail">
+                        <button class="footer-form-subscribe__btn" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom-content">
+                <ul class="footer-bottom-content-list">
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Политика конфиденциальности</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Согласие на обработку персональных данных</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Копирайт</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Разработка веб-дизайна</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>

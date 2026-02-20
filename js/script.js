@@ -28,10 +28,18 @@ function initNewsSlider() {
 
     const swiper = new Swiper(newsSlider, {
         loop: true,
-        slidesPerView: 4,
+        slidesPerView: 'auto',
         observer: true,
         observeParents: true,
         spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next', 
+            prevEl: '.swiper-button-prev', 
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
+        }
     })
 }
 
