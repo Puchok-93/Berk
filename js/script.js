@@ -6,7 +6,7 @@ function initReviewSlider() {
     
     const swiper = new Swiper(reviewSlider, {
         loop: slides.length > 3 ? true : false,
-        slidesPerView: 3,
+        slidesPerView: 'auto',
         observer: true,
         observeParents: true,
         spaceBetween: 20,
@@ -43,9 +43,35 @@ function initNewsSlider() {
     })
 }
 
+function initHeaderMenu() {
+    const headerMenu = document.querySelector('.header-menu');
+    const burgerBtn = document.getElementById('header-burger-btn');
+    
+    if(!headerMenu || !burgerBtn) return;
+
+    const closeBtn = headerMenu.querySelector('.header-menu-heading__close-bnt');
+
+    burgerBtn.addEventListener('click', (e) => {
+        const target = e.target.closest('.header-burger-btn');
+
+        if(target) {
+            headerMenu.classList.add('js-is-open');
+        }
+    })
+
+    closeBtn.addEventListener('click', (e) => {
+        const target = e.target.closest('.header-menu-heading__close-bnt');
+
+        if(target) {
+            headerMenu.classList.remove('js-is-open');
+        }
+    })
+}
+
 function init() {
     initReviewSlider();
     initNewsSlider();
+    initHeaderMenu();
 }
 
 document.addEventListener('DOMContentLoaded', init);

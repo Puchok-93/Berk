@@ -36,6 +36,11 @@
                     <a class="header-contacts__contact" href="tel:+10000000000">+1 000 000-00-00</a>
                 </div>
                 <div class="header-controls">
+                    <button class="search-btn" type="button">
+                        <svg class="header-search-form__icon icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </button>
                     <div class="compare">
                         <a class="compare__link" href="/personal/compare">
                             <svg class="compare__icon icon">
@@ -68,13 +73,13 @@
                         <div class="cart__value">2</div>
                     </div>
                 </div>
-                <button class="burger-btn" type="button">
+                <button id="header-burger-btn" class="header-burger-btn burger-btn" type="button">
                     <svg class="burger-btn__icon icon">
                         <use xlink:href="img/sprite.svg#icon-burger"></use>
                     </svg>
                 </button>
             </div>
-            <div style="display: none" class="header-menu">
+            <div class="header-menu">
                 <div class="header-menu-heading">
                     <a class="header-menu-heading__logo header-logo" href="/">
                         <img src="img/footer-logo.svg" alt="">
@@ -118,7 +123,44 @@
                         </div>
                     </div>
                     <div class="header-menu-right-column">
-
+                        <div id="header-menu-slider" class="header-menu-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Категория к которой нужно привлечь много внимания</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="something-content">
+                            <ul class="something-content-list">
+                                <li class="something-content-item">
+                                    <div class="something-content-item__img">
+                                        <img src="img/header-content/header-content-2.jpg" alt="">
+                                    </div>
+                                    <h4 class="something-content-item__title">Категория/раздел</h4>
+                                </li>
+                                <li class="something-content-item">
+                                    <div class="something-content-item__img">
+                                        <img src="img/header-content/header-content-3.jpg" alt="">
+                                    </div>
+                                    <h4 class="something-content-item__title">Категория/раздел</h4>
+                                </li>
+                                <li class="something-content-item">
+                                    <div class="something-content-item__img">
+                                        <img src="img/header-content/header-content-4.jpg" alt="">
+                                    </div>
+                                    <h4 class="something-content-item__title">Категория/раздел</h4>
+                                </li>
+                                <li class="something-content-item">
+                                    <div class="something-content-item__img">
+                                        <img src="img/header-content/header-content-5.jpg" alt="">
+                                    </div>
+                                    <h4 class="something-content-item__title">Категория/раздел</h4>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -141,6 +183,7 @@
                             each chair is tailored to your body shape, allowing you to enjoy music for 
                             hours without getting tired.
                         </p>
+                        <p class="main-screen-content-info__mob-text">not just pieces of furniture, but real works of art</p>
                         <a class="main-screen-content-info__link catalog-link" href="#">
                             go to the catalog
                             <svg class="catalog-link__icon icon" viewBox="0 0 251 15">
