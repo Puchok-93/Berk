@@ -101,7 +101,7 @@
     font: 400 1.25rem / 1.4 var(--font-roboto);
     background-color: var(--base-color-olive-gray);
     color: var(--base-color-cream-beige);
-    padding: 0 52px;
+    padding: 20px 52px;
 }
 
 .footer-bottom-content {

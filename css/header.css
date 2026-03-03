@@ -94,6 +94,7 @@
 .compare__icon {
     width: 25px;
     height: 25px;
+    stroke: #443F3A;
 }
 
 .compare__value {
@@ -127,6 +128,7 @@
     width: 25px;
     height: 25px;
     fill: transparent;
+    stroke: #443F3A;
 }
 
 .favorite__value {
