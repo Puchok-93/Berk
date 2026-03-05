@@ -15,6 +15,21 @@
     visibility: visible;
 }
 
+.filters-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font: 400 1.25rem / 1.4 var(--font-roboto);
+    background-color: var(--base-color-olive-gray);
+    color: var(--base-color-cream-beige);
+    padding: 16px 40px;
+}
+
+.filters-btn__icon {
+    width: 23px;
+    height: 16px;
+}
+
 .filters {
     position: fixed;
     display: flex;
@@ -39,7 +54,6 @@
     width: 20px;
     height: 20px;
 }
-
 
 .filters-content {
     display: flex;
@@ -74,6 +88,8 @@
 .filter__title--dropdpwn {
     padding: 0 0 0 26px;
 }
+
+/* Range Filter */
 
 .range-filter {
     display: flex;

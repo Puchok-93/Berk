@@ -36,7 +36,7 @@
 .header-search-form__input {
     width: 100%;
     font: 400 16px/1 var(--font-roboto);
-    background-color: var(--base-color-light-gray);
+    background-color: transparent;
     color: var(--base-color-dark);
     border: 2px solid var(--base-color-sand-beige);
     border-radius: 1000px;
@@ -337,12 +337,10 @@
     gap: 20px;
 }
 
-.something-content-item__img {
-}
-
 .something-content-item__title {
     font: 500 1.125rem/1 var(--font-roboto);
 }
+
 @media(max-width: 1440px) {
     .header-menu {
         padding: 30px 60px;

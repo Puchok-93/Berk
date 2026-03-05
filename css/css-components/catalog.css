@@ -22,6 +22,7 @@
     top: -4px;
 }
 
+/* Catalog Selection */
 .selections {
     display: flex;
     gap: 35px;
@@ -53,21 +54,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.filters-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font: 400 1.25rem / 1.4 var(--font-roboto);
-    background-color: var(--base-color-olive-gray);
-    color: var(--base-color-cream-beige);
-    padding: 16px 40px;
-}
-
-.filters-btn__icon {
-    width: 23px;
-    height: 16px;
 }
 
 .sorting {

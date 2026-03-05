@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+</head>
+
+<body id="page-detailed-product">
+    <!-- Header -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-content">
+                <a class="header-logo" href="/">
+                    <img src="img/footer-logo.svg" alt="">
+                </a>
+                <div class="header-search">
+                    <form class="header-search-form" action="/search/">
+                        <input class="header-search-form__input" type="text" placeholder="Наушники Sony..." name="q" value="" id="top-search-line" autocomplete="off">
+                        <button class="header-search-form__btn" aria-label="Найти" type="submit">
+                            <svg class="header-search-form__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <div class="header-contacts">
+                    <a class="header-contacts__contact" href="mailto:info@nordic-comfort.com">info@nordic-comfort.com</a>
+                    <a class="header-contacts__contact" href="tel:+10000000000">+1 000 000-00-00</a>
+                </div>
+                <div class="header-controls">
+                    <button class="search-btn" type="button">
+                        <svg class="header-search-form__icon icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </button>
+                    <div class="compare">
+                        <a class="compare__link" href="/personal/compare">
+                            <svg class="compare__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-compare"></use>
+                            </svg>
+                        </a>
+                        <div class="compare__value">2</div>
+                    </div>
+                    <div class="favorite">
+                        <a class="favorite__link" href="/personal/favorite">
+                            <svg class="favorite__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                            </svg>
+                        </a>
+                        <div class="favorite__value">2</div>
+                    </div>
+                    <div class="login">
+                        <a class="login__link" href="/personal/favorite">
+                            <svg class="login__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-login"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="cart">
+                        <a class="cart__link" href="/personal/cart">
+                            <svg class="cart__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-cart"></use>
+                            </svg>
+                        </a>
+                        <div class="cart__value">2</div>
+                    </div>
+                </div>
+                <button id="header-burger-btn" class="header-burger-btn burger-btn" type="button">
+                    <svg class="burger-btn__icon icon">
+                        <use xlink:href="img/sprite.svg#icon-burger"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="header-menu">
+                <div class="header-menu-heading">
+                    <a class="header-menu-heading__logo header-logo" href="/">
+                        <img src="img/footer-logo.svg" alt="">
+                    </a>
+                    <button class="header-menu-heading__close-bnt" type="button">
+                        <svg class="header-menu-heading__close-icon icon">
+                            <use xlink:href="img/sprite.svg#icon-cross"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header-menu-content">
+                    <div class="header-menu-left-column">
+                        <div class="header-menu-navigation">
+                            <div class="header-catalog">
+                                <a class="header-catalog__link" href="#">Каталог</a>
+                                    <div class="header-sub-catalog">
+                                        <a class="header-sub-catalog__link" href="#">Кресла</a>
+                                        <a class="header-sub-catalog__link" href="#">Тумбы</a>
+                                    </div>
+                                </li>
+                            </div>
+                            <a class="header-menu-navigation__link" href="#">Производство</a>
+                            <a class="header-menu-navigation__link" href="#">Новости</a>
+                        </div>
+                        <div class="header-brands">
+                            <div class="header-brand">
+                                <a class="header-brand__link"href="#">
+                                    <img src="img/brands/brand-berg.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="header-brand">
+                                <a class="header-brand__link"href="#">
+                                    <img src="img/brands/brand-berg.webp" alt="">
+                                </a>
+                            </div>
+                            <div class="header-brand">
+                                <a class="header-brand__link"href="#">
+                                    <img src="img/brands/brand-berg.webp" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-menu-right-column">
+                        <div id="header-menu-slider" class="header-menu-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Категория к которой нужно привлечь много внимания</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="something-content">
+                            <ul class="something-content-list">
+                                <li class="something-content-item">
+                                    <div class="something-content-item__img">
+                                        <img src="img/header-content/header-content-2.jpg" alt="">
+                                    </div>
+                                    <h4 class="something-content-item__title">Категория/раздел</h4>
+                                </li>
+                                <li class="something-content-item">
+                                    <div class="something-content-item__img">
+                                        <img src="img/header-content/header-content-3.jpg" alt="">
+                                    </div>
+                                    <h4 class="something-content-item__title">Категория/раздел</h4>
+                                </li>
+                                <li class="something-content-item">
+                                    <div class="something-content-item__img">
+                                        <img src="img/header-content/header-content-4.jpg" alt="">
+                                    </div>
+                                    <h4 class="something-content-item__title">Категория/раздел</h4>
+                                </li>
+                                <li class="something-content-item">
+                                    <div class="something-content-item__img">
+                                        <img src="img/header-content/header-content-5.jpg" alt="">
+                                    </div>
+                                    <h4 class="something-content-item__title">Категория/раздел</h4>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Содержимое страницы -->
+    <main>
+        <!-- Breadcrumbs -->
+        <section class="breadcrumbs">
+            <div class="wrapper">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a class="breadcrumbs-list__link" itemprop="item" href="/">
+                                <span itemprop="name">Главная</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a class="breadcrumbs-list__link" itemprop="item" href="/page-catalog.html">
+                                <span itemprop="name">Каталог</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a class="breadcrumbs-list__link" itemprop="item" href="/armchairs">
+                                <span itemprop="name">Кресла</span>
+                            </a>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a class="breadcrumbs-list__link" itemprop="item" href="/berg">
+                                <span itemprop="name">Кресла</span>
+                            </a>
+                            <meta itemprop="position" content="4" />
+                        </li>
+                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <span class="breadcrumbs-list__current-page"itemprop="name" aria-current="page">Berg Coda Electric Walnut Wireless Remote Control</span>
+                            <meta itemprop="position" content="5" />
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Detail Product -->
+        <section class="detailed-product">
+            <div class="wrapper">
+                <div class="detailed-product-content">
+                    <div class="detailed-product-main-content">
+                        <!-- Product Gallery -->
+                        <div class="detailed-product-gallery">
+                            <!-- Main Gallery -->
+                            <div id="detailed-product-main-gallery" class="swiper detailed-product-main-gallery swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="img/detailed-product/detai-product-1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/detailed-product/detai-product-2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/detailed-product/detai-product-3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/detailed-product/detai-product-4.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/detailed-product/detai-product-5.jpg" alt="">
+                                    </div>
+                                </div>
+                            <div class="swiper-controls detailed-product-main-gallery-controls">
+                                <div class="detailed-product-main-gallery-controls__control swiper-button-next">
+                                    <svg class="detailed-product-main-gallery-controls__icon icon" viewBox="0 0 24 24">
+                                        <use xlink:href="img/sprite.svg#slider-arrow-next"></use>
+                                    </svg>
+                                </div>
+                                <div class="detailed-product-main-gallery-controls__control swiper-button-prev">
+                                    <svg class="detailed-product-main-gallery-controls__icon icon" viewBox="0 0 24 24">
+                                        <use xlink:href="img/sprite.svg#slider-arrow-prev"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            </div>
+                            <!-- Thumb Gallery -->
+                            <div id="detailed-product-thumb-gallery" class="detailed-product-thumb-gallery">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="img/detailed-product/detai-product-1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/detailed-product/detai-product-2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/detailed-product/detai-product-3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/detailed-product/detai-product-4.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="img/detailed-product/detai-product-5.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product Info -->
+                        <div class="detailed-product-info">
+                            <div class="detailed-product-info-heading">
+                                <p class="detailed-product-article">
+                                    <span class="detailed-product-article__label">Арт.</span>
+                                    <span class="detailed-product-article__value">0473958</span>
+                                </p>
+                                <h1 class="detailed-product-info-heading__title">Berg Coda Electric Walnut Wireless Remote Control</h1>
+                                <div class="detailed-product-controls">
+                                    <button data-title="to compare" data-id="1" class="compare-btn">
+                                        <svg class="compare-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-compare"></use>
+                                        </svg>
+                                    </button>
+                                    <button data-title="to favorite" data-id="1" class="favorite-btn">
+                                        <svg class="favorite-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Options -->
+                            <div class="detailed-product-options">
+                                <div class="detailed-product-option js-active">
+                                    <button class="detailed-product-option__btn" type="button">Цвет</button>
+                                    <div class="detailed-product-option__content">
+                                        <div data-variation="color" class="detailed-product-select-variation detailed-product-select-variation--color">
+                                            <button class="detailed-product-select-variation__item color" type="button" style="background: #5F615F;"></button>
+                                            <button class="detailed-product-select-variation__item color js-active" type="button" style="background: #355D86;"></button>
+                                            <button class="detailed-product-select-variation__item color" type="button" style="background: #616F61;"></button>
+                                            <button class="detailed-product-select-variation__item color" type="button" style="background: #ffffff;"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detailed-product-option">
+                                    <button class="detailed-product-option__btn" type="button">Материал</button>
+                                    <div class="detailed-product-option__content">
+                                        <div data-variation="material" class="detailed-product-select-variation">
+                                            <button class="detailed-product-select-variation__item material" type="button" style="background: url(img/detailed-product/material-1.jpg);"></button>
+                                            <button class="detailed-product-select-variation__item material js-active" type="button" style="background: url(img/detailed-product/material-2.jpg)"></button>
+                                            <button class="detailed-product-select-variation__item material" type="button" style="background: url(img/detailed-product/material-3.jpg)"></button>
+                                            <button class="detailed-product-select-variation__item material" type="button" style="background: url(img/detailed-product/material-4.jpg)"></button>
+                                            <button class="detailed-product-select-variation__item material" type="button" style="background: url(img/detailed-product/material-5.jpg)"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detailed-product-option">
+                                    <button class="detailed-product-option__btn" type="button">Ручки</button>
+                                    <div class="detailed-product-option__content">
+                                        <div data-variation="accessories" class="detailed-product-select-variation">
+                                            <button class="detailed-product-select-variation__item accessories js-active" type="button" style="background-image: url(img/detailed-product/dop-1.jpg)"></button>
+                                            <button class="detailed-product-select-variation__item accessories" type="button" style="background-image: url(img/detailed-product/dop-2.jpg)"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="detailed-product-option">
+                                    <button class="detailed-product-option__btn" type="button">Выбор 1</button>
+                                    <div class="detailed-product-option__content">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quod, saepe ut magnam minus culpa laborum consequuntur quaerat. Officiis ad ullam deserunt facilis non rem quos fuga eum inventore. Enim.</p>
+                                    </div>
+                                </div>
+                                <div class="detailed-product-option">
+                                    <button class="detailed-product-option__btn" type="button">Выбор 1</button>
+                                    <div class="detailed-product-option__content">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui quod, saepe ut magnam minus culpa laborum consequuntur quaerat. Officiis ad ullam deserunt facilis non rem quos fuga eum inventore. Enim.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Price -->
+                            <div class="detailed-product-price">
+                                <p class="detailed-product-price__cost">1200
+                                    <span class="detailed-product-price__currency">$</span>
+                                </p>
+                            </div>
+                            <button class="add-to-cart" type="button">в корзину</button>
+                        </div>
+                    </div>
+                    <div class="detailed-product-additional-content">
+                        <div class="detailed-product-tabs">
+                            <div class="detailed-products-triggers">
+                                <button class="detailed-products-triggers__trigger js-active" type="button">Описание</button>
+                                <button class="detailed-products-triggers__trigger" type="button">Характеристики</button>
+                            </div>
+                            <div class="detailed-product-tab-content">
+                                <!-- Описание -->
+                                <div class="detailed-product-tab-content__tab js-active">
+                                    <div class="detailed-product-description">
+                                        <p>
+                                            Благодаря своему оригинальному дизайну, Coda предлагает широкие возможности настройки. 
+                                            Спинка, сконструированная индивидуально, учитывает потребности пользователя. 
+                                            Подголовник регулируется по высоте, в стороны и вперед. 2Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                        Est beatae inventore reiciendis explicabo veritatis animi, quos ullam. 
+                                        Inventore, ullam cum illo officia consequuntur impedit totam sequi facilis 
+                                        recusandae harum explicabo! 2Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                        Est beatae inventore reiciendis explicabo veritatis animi, quos ullam. 
+                                        Inventore, ullam cum illo officia consequuntur impedit totam sequi facilis 
+                                        recusandae harum explicabo!
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- Характеристики -->
+                                <div class="detailed-product-tab-content__tab">
+                                    <div class="detailed-product-characteristics">
+                                        <ul class="characteristics-list">
+                                            <li class="characteristic">
+                                                <p class="characteristic__label">Бренд</p>
+                                                <p class="characteristic__value">Berg</p>
+                                            </li>
+                                            <li class="characteristic">
+                                                <p class="characteristic__label">Высота</p>
+                                                <p class="characteristic__value">120 см</p>
+                                            </li>
+                                            <li class="characteristic">
+                                                <p class="characteristic__label">Ширина</p>
+                                                <p class="characteristic__value">120 см</p>
+                                            </li>
+                                            <li class="characteristic">
+                                                <p class="characteristic__label">Глубина</p>
+                                                <p class="characteristic__value">120 см</p>
+                                            </li>
+                                            <li class="characteristic">
+                                                <p class="characteristic__label">Вес</p>
+                                                <p class="characteristic__value">30 кг</p>
+                                            </li>
+                                            <li class="characteristic">
+                                                <p class="characteristic__label">Гарантия</p>
+                                                <p class="characteristic__value">12 месяцев</p>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collection Products -->
+        <section class="collection-products detailed-product-section">
+            <div class="wrapper">
+                <h2 class="detailed-product-section__title">Товары в коллекции</h2>
+                <ul id="catalog-list" class="catalog-list">
+                    <li class="catalog-list__product">
+                        <article class="catalog-product-card" data-element-id="1" data-id="1">
+                            <a href="#" class="catalog-product-card__img-link">
+                                <img src="img/products/img-1.jpg" alt="Berg Coda Electric Walnut Wireless Remote Control">
+                            </a>
+                            <div class="catalog-product-card-visible-content">
+                                <h3 class="catalog-product-card__title">
+                                    <a href="#">Berg Coda Electric Walnut Wireless Remote Control</a>
+                                </h3>
+                                <div class="catalog-product-card-controls">
+                                    <button data-title="to compare" data-id="1" class="compare-btn">
+                                        <svg class="compare-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-compare"></use>
+                                        </svg>
+                                    </button>
+                                    <button data-title="to favorite" data-id="1" class="favorite-btn">
+                                        <svg class="favorite-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="catalog-product-card-hidden-content">
+                                <div class="catalog-product-card-char">
+                                    <span class="catalog-product-card-char__label">Материал:</span>
+                                    <span class="catalog-product-card-char__value">Кожа</span>
+                                </div>
+                                <div class="catalog-product-card-price">
+                                    <span class="catalog-product-card-price__cost">1 200</span>
+                                    <span class="catalog-product-card-price__currency">$</span>
+                                </div>
+                                <button class="add-to-cart-btn" data-id="1" type="button">в корзину</button>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="catalog-list__product">
+                        <article class="catalog-product-card" data-element-id="1" data-id="1">
+                            <a href="#" class="catalog-product-card__img-link">
+                                <img src="img/products/img-1.jpg" alt="Berg Coda Electric Walnut Wireless Remote Control">
+                            </a>
+                            <div class="catalog-product-card-visible-content">
+                                <h3 class="catalog-product-card__title">
+                                    <a href="#">Berg Coda Electric Walnut Wireless Remote Control</a>
+                                </h3>
+                                <div class="catalog-product-card-controls">
+                                    <button data-title="to compare" data-id="1" class="compare-btn">
+                                        <svg class="compare-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-compare"></use>
+                                        </svg>
+                                    </button>
+                                    <button data-title="to favorite" data-id="1" class="favorite-btn">
+                                        <svg class="favorite-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="catalog-product-card-hidden-content">
+                                <div class="catalog-product-card-char">
+                                    <span class="catalog-product-card-char__label">Материал:</span>
+                                    <span class="catalog-product-card-char__value">Кожа</span>
+                                </div>
+                                <div class="catalog-product-card-price">
+                                    <span class="catalog-product-card-price__cost">1 200</span>
+                                    <span class="catalog-product-card-price__currency">$</span>
+                                </div>
+                                <button class="add-to-cart-btn" data-id="1" type="button">в корзину</button>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="catalog-list__product">
+                        <article class="catalog-product-card" data-element-id="1" data-id="1">
+                            <a href="#" class="catalog-product-card__img-link">
+                                <img src="img/products/img-1.jpg" alt="Berg Coda Electric Walnut Wireless Remote Control">
+                            </a>
+                            <div class="catalog-product-card-visible-content">
+                                <h3 class="catalog-product-card__title">
+                                    <a href="#">Berg Coda Electric Walnut Wireless Remote Control</a>
+                                </h3>
+                                <div class="catalog-product-card-controls">
+                                    <button data-title="to compare" data-id="1" class="compare-btn">
+                                        <svg class="compare-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-compare"></use>
+                                        </svg>
+                                    </button>
+                                    <button data-title="to favorite" data-id="1" class="favorite-btn">
+                                        <svg class="favorite-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="catalog-product-card-hidden-content">
+                                <div class="catalog-product-card-char">
+                                    <span class="catalog-product-card-char__label">Материал:</span>
+                                    <span class="catalog-product-card-char__value">Кожа</span>
+                                </div>
+                                <div class="catalog-product-card-price">
+                                    <span class="catalog-product-card-price__cost">1 200</span>
+                                    <span class="catalog-product-card-price__currency">$</span>
+                                </div>
+                                <button class="add-to-cart-btn" data-id="1" type="button">в корзину</button>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Viewed Products -->
+        <section class="viewed-products detailed-product-section">
+            <div class="wrapper">
+                <h2 class="detailed-product-section__title">Вы смотрели</h2>
+                <ul id="catalog-list" class="catalog-list">
+                    <li class="catalog-list__product">
+                        <article class="catalog-product-card" data-element-id="1" data-id="1">
+                            <a href="#" class="catalog-product-card__img-link">
+                                <img src="img/products/img-1.jpg" alt="Berg Coda Electric Walnut Wireless Remote Control">
+                            </a>
+                            <div class="catalog-product-card-visible-content">
+                                <h3 class="catalog-product-card__title">
+                                    <a href="#">Berg Coda Electric Walnut Wireless Remote Control</a>
+                                </h3>
+                                <div class="catalog-product-card-controls">
+                                    <button data-title="to compare" data-id="1" class="compare-btn">
+                                        <svg class="compare-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-compare"></use>
+                                        </svg>
+                                    </button>
+                                    <button data-title="to favorite" data-id="1" class="favorite-btn">
+                                        <svg class="favorite-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="catalog-product-card-hidden-content">
+                                <div class="catalog-product-card-char">
+                                    <span class="catalog-product-card-char__label">Материал:</span>
+                                    <span class="catalog-product-card-char__value">Кожа</span>
+                                </div>
+                                <div class="catalog-product-card-price">
+                                    <span class="catalog-product-card-price__cost">1 200</span>
+                                    <span class="catalog-product-card-price__currency">$</span>
+                                </div>
+                                <button class="add-to-cart-btn" data-id="1" type="button">в корзину</button>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="catalog-list__product">
+                        <article class="catalog-product-card" data-element-id="1" data-id="1">
+                            <a href="#" class="catalog-product-card__img-link">
+                                <img src="img/products/img-1.jpg" alt="Berg Coda Electric Walnut Wireless Remote Control">
+                            </a>
+                            <div class="catalog-product-card-visible-content">
+                                <h3 class="catalog-product-card__title">
+                                    <a href="#">Berg Coda Electric Walnut Wireless Remote Control</a>
+                                </h3>
+                                <div class="catalog-product-card-controls">
+                                    <button data-title="to compare" data-id="1" class="compare-btn">
+                                        <svg class="compare-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-compare"></use>
+                                        </svg>
+                                    </button>
+                                    <button data-title="to favorite" data-id="1" class="favorite-btn">
+                                        <svg class="favorite-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="catalog-product-card-hidden-content">
+                                <div class="catalog-product-card-char">
+                                    <span class="catalog-product-card-char__label">Материал:</span>
+                                    <span class="catalog-product-card-char__value">Кожа</span>
+                                </div>
+                                <div class="catalog-product-card-price">
+                                    <span class="catalog-product-card-price__cost">1 200</span>
+                                    <span class="catalog-product-card-price__currency">$</span>
+                                </div>
+                                <button class="add-to-cart-btn" data-id="1" type="button">в корзину</button>
+                            </div>
+                        </article>
+                    </li>
+                    <li class="catalog-list__product">
+                        <article class="catalog-product-card" data-element-id="1" data-id="1">
+                            <a href="#" class="catalog-product-card__img-link">
+                                <img src="img/products/img-1.jpg" alt="Berg Coda Electric Walnut Wireless Remote Control">
+                            </a>
+                            <div class="catalog-product-card-visible-content">
+                                <h3 class="catalog-product-card__title">
+                                    <a href="#">Berg Coda Electric Walnut Wireless Remote Control</a>
+                                </h3>
+                                <div class="catalog-product-card-controls">
+                                    <button data-title="to compare" data-id="1" class="compare-btn">
+                                        <svg class="compare-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-compare"></use>
+                                        </svg>
+                                    </button>
+                                    <button data-title="to favorite" data-id="1" class="favorite-btn">
+                                        <svg class="favorite-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="catalog-product-card-hidden-content">
+                                <div class="catalog-product-card-char">
+                                    <span class="catalog-product-card-char__label">Материал:</span>
+                                    <span class="catalog-product-card-char__value">Кожа</span>
+                                </div>
+                                <div class="catalog-product-card-price">
+                                    <span class="catalog-product-card-price__cost">1 200</span>
+                                    <span class="catalog-product-card-price__currency">$</span>
+                                </div>
+                                <button class="add-to-cart-btn" data-id="1" type="button">в корзину</button>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <a class="footer-logo" href="/">
+                    <img src="img/footer-logo.svg" alt="">
+                </a>
+                <!-- Navigation -->
+                <div class="footer-navigation">
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Каталог</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">О компании</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Бренды</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Отзывы</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Производство</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Новости</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Реквизиты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Контакты</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">+7 (000) 000-00-00</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">example@gmail.com</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Address</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Social -->
+                <div class="footer-social">
+                    <ul class="footer-social-list">
+                        <li class="footer-social-list__item">
+                            <a class="footer-social-list__link" href="#" target="_blank">
+                                <img class="footer-social-list__icon" src="" alt="" >
+                            </a>
+                        </li>
+                        <li class="footer-social-list__item">
+                            <a class="footer-social-list__link" href="#" target="_blank">
+                                <img class="footer-social-list__icon" src="" alt="" >
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Subscribe -->
+                <div class="footer-subscribe">
+                    <h2 class="footer-subscribe__title">Follow our news</h2>
+                    <form class="footer-form-subscribe" action="post">
+                        <input class="footer-form-subscribe__input" type="text" placeholder="e-mail">
+                        <button class="footer-form-subscribe__btn" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom-content">
+                <ul class="footer-bottom-content-list">
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Политика конфиденциальности</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Согласие на обработку персональных данных</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Копирайт</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Разработка веб-дизайна</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
