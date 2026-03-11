@@ -1,26 +1,122 @@
-function initHeaderMenu() {
-    const headerMenu = document.querySelector('.header-menu');
-    const burgerBtn = document.getElementById('header-burger-btn');
-    
-    if(!headerMenu || !burgerBtn) return;
+function initHeaderMethods(){
+    function initHeaderMenu() {
+        const headerMenu = document.querySelector('.header-menu');
+        const burgerBtn = document.getElementById('header-burger-btn');
+        
+        if(!headerMenu || !burgerBtn) return;
 
-    const closeBtn = headerMenu.querySelector('.header-menu-heading__close-bnt');
+        const closeBtn = headerMenu.querySelector('.header-menu-heading__close-bnt');
 
-    burgerBtn.addEventListener('click', (e) => {
-        const target = e.target.closest('.header-burger-btn');
+        burgerBtn.addEventListener('click', (e) => {
+            const target = e.target.closest('.header-burger-btn');
 
-        if(target) {
-            headerMenu.classList.add('js-is-open');
+            if(target) {
+                headerMenu.classList.add('js-is-open');
+            }
+        })
+
+        closeBtn.addEventListener('click', (e) => {
+            const target = e.target.closest('.header-menu-heading__close-bnt');
+
+            if(target) {
+                headerMenu.classList.remove('js-is-open');
+            }
+        })
+    };
+
+    function initHeaderMenuSlider() {
+        let mainMenuSlider;
+        let thumbMenuSlider;
+
+        function initDeskMenuSlider() {
+            thumbMenuSlider = new Swiper('#header-menu-thumb-slider', {
+                    loop: true,
+                    spaceBetween: 20,
+                    slidesPerView: 4,
+                    freeMode: true,
+                    watchSlidesProgress: true,
+            });
+
+            mainMenuSlider = new Swiper('#header-menu-main-slider', {
+                loop: true,
+                spaceBetween: 20,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                thumbs: {
+                    swiper: thumbMenuSlider,
+                },
+            })
         }
-    })
 
-    closeBtn.addEventListener('click', (e) => {
-        const target = e.target.closest('.header-menu-heading__close-bnt');
-
-        if(target) {
-            headerMenu.classList.remove('js-is-open');
+        function initMobMenuSlider () {
+            mainMenuSlider = new Swiper('#header-menu-main-slider', {
+                slidesPerView: 'auto',
+                observer: true,
+                observeParents: true,
+                spaceBetween: 20,
+                scrollbar: {
+                    el: '.swiper-scrollbar',
+                    hide: false,
+                }
+            })
         }
-    })
+
+        function destroyMenuSlider() {
+            if(mainMenuSlider) {
+                mainMenuSlider.destroy(true,true);
+                mainMenuSlider = null;
+            }
+
+            if(thumbMenuSlider) {
+                thumbMenuSlider.destroy(true,true);
+                thumbMenuSlider = null;
+            }
+        }
+
+        function checkViewPort() {
+            destroyMenuSlider();
+
+            if(window.innerWidth > 767) {
+                initDeskMenuSlider();
+            } else {
+                initMobMenuSlider();
+            }
+        }
+
+        checkViewPort();
+        window.addEventListener('resize', checkViewPort);
+    };
+
+    function initMobSearch() {
+        const headerSearch = document.querySelector('.header-search');
+        const headerSearchClose = document.querySelector('.header-search__close-btn');
+        const searchBtn = document.querySelector('.search-btn');
+
+        searchBtn.addEventListener('click', (e) => {
+            if(!headerSearch.classList.contains('js-active')) {
+                headerSearch.classList.add('js-active');
+            } else {
+                headerSearch.classList.remove('js-active');
+            }
+        })
+
+        headerSearchClose.addEventListener('click', (e) => {
+            if(headerSearch.classList.contains('js-active')) {
+                headerSearch.classList.remove('js-active');
+            } else {
+                headerSearch.classList.add('js-active');
+            }
+        })
+    };
+
+    initHeaderMenu();
+    initHeaderMenuSlider();
+
+    if(window.innerWidth < 1220) {
+        initMobSearch();
+    }
 }
 
 function initMainPageMethods() {
@@ -381,7 +477,7 @@ function initDetailProductMethods() {
 }
 
 function init() {
-    initHeaderMenu();
+    initHeaderMethods();
     initMainPageMethods()
     initCatalogMethods();
     initDetailProductMethods();
