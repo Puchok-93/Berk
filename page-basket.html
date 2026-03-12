@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+</head>
+
+<body id="page-basket">
+    <!-- Header -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-content">
+                <a class="header-logo" href="/">
+                    <img src="img/footer-logo.svg" alt="">
+                </a>
+                <div class="header-search">
+                    <form class="header-search-form" action="/search/">
+                        <input class="header-search-form__input" type="text" placeholder="Наушники Sony..." name="q" value="" id="top-search-line" autocomplete="off">
+                        <button class="header-search-form__btn" aria-label="Найти" type="submit">
+                            <svg class="header-search-form__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <button class="header-search__close-btn" type="button">
+                        <svg class="header-search__close-icon icon">
+                            <use xlink:href="img/sprite.svg#icon-cross"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header-contacts">
+                    <a class="header-contacts__contact" href="mailto:info@nordic-comfort.com">info@nordic-comfort.com</a>
+                    <a class="header-contacts__contact" href="tel:+10000000000">+1 000 000-00-00</a>
+                </div>
+                <div class="header-controls">
+                    <button class="search-btn" type="button">
+                        <svg class="header-search-form__icon icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </button>
+                    <div class="compare">
+                        <a class="compare__link" href="/personal/compare">
+                            <svg class="compare__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-compare"></use>
+                            </svg>
+                        </a>
+                        <div class="compare__value">2</div>
+                    </div>
+                    <div class="favorite">
+                        <a class="favorite__link" href="/personal/favorite">
+                            <svg class="favorite__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                            </svg>
+                        </a>
+                        <div class="favorite__value">2</div>
+                    </div>
+                    <div class="login">
+                        <a class="login__link" href="/personal/favorite">
+                            <svg class="login__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-login"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="cart">
+                        <a class="cart__link" href="/personal/cart">
+                            <svg class="cart__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-cart"></use>
+                            </svg>
+                        </a>
+                        <div class="cart__value">2</div>
+                    </div>
+                </div>
+                <button id="header-burger-btn" class="header-burger-btn burger-btn" type="button">
+                    <svg class="burger-btn__icon icon">
+                        <use xlink:href="img/sprite.svg#icon-burger"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="header-menu">
+                <div class="header-menu-heading">
+                    <a class="header-menu-heading__logo header-logo" href="/">
+                        <img src="img/footer-logo.svg" alt="">
+                    </a>
+                    <div class="header-controls">
+                        <button class="search-btn" type="button">
+                            <svg class="header-search-form__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                        <div class="compare">
+                            <a class="compare__link" href="/personal/compare">
+                                <svg class="compare__icon icon">
+                                    <use xlink:href="img/sprite.svg#icon-compare"></use>
+                                </svg>
+                            </a>
+                            <div class="compare__value">2</div>
+                        </div>
+                        <div class="favorite">
+                            <a class="favorite__link" href="/personal/favorite">
+                                <svg class="favorite__icon icon">
+                                    <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                                </svg>
+                            </a>
+                            <div class="favorite__value">2</div>
+                        </div>
+                        <div class="login">
+                            <a class="login__link" href="/personal/favorite">
+                                <svg class="login__icon icon">
+                                    <use xlink:href="img/sprite.svg#icon-login"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="cart">
+                            <a class="cart__link" href="/personal/cart">
+                                <svg class="cart__icon icon">
+                                    <use xlink:href="img/sprite.svg#icon-cart"></use>
+                                </svg>
+                            </a>
+                            <div class="cart__value">2</div>
+                        </div>
+                    </div>
+                    <button class="header-menu-heading__close-bnt" type="button">
+                        <svg class="header-menu-heading__close-icon icon">
+                            <use xlink:href="img/sprite.svg#icon-cross"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header-menu-content">
+                    <div class="header-menu-navigation">
+                        <div class="header-catalog">
+                            <a class="header-catalog__link" href="#">Каталог</a>
+                                <div class="header-sub-catalog">
+                                    <a class="header-sub-catalog__link" href="#">Кресла</a>
+                                    <a class="header-sub-catalog__link" href="#">Тумбы</a>
+                                </div>
+                            </li>
+                        </div>
+                        <a class="header-menu-navigation__link" href="#">Производство</a>
+                        <a class="header-menu-navigation__link" href="#">Новости</a>
+                    </div>
+                    
+                    <div class="header-brands">
+                        <div class="header-brand">
+                            <a class="header-brand__link"href="#">
+                                <img src="img/brands/brand-berg.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="header-brand">
+                            <a class="header-brand__link"href="#">
+                                <img src="img/brands/brand-berg.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="header-brand">
+                            <a class="header-brand__link"href="#">
+                                <img src="img/brands/brand-berg.webp" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-menu-slider">
+                        <div id="header-menu-main-slider" class="header-main-slider swiper">
+                            <div class="swiper-wrapper">
+                                <!-- 1 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 1</h4>
+                                </div>
+                                <!-- 2 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 2</h4>
+                                </div>
+                                <!-- 3 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 3</h4>
+                                </div>
+                                <!-- 4 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 4</h4>
+                                </div>
+                                <!-- 5 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 5</h4>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                        <div id="header-menu-thumb-slider" class="header-thumb-slider swiper">
+                            <div class="swiper-wrapper">
+                                <!-- 1 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 1</h4>
+                                </div>
+                                <!-- 2 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 2</h4>
+                                </div>
+                                <!-- 3 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 3</h4>
+                                </div>
+                                <!-- 4 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 4</h4>
+                                </div>
+                                <!-- 5 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 5</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Содержимое страницы -->
+    <main>
+        <!-- Breadcrumbs -->
+        <section class="breadcrumbs">
+            <div class="wrapper">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a class="breadcrumbs-list__link" itemprop="item" href="/">
+                                <span itemprop="name">Главная</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a class="breadcrumbs-list__link" itemprop="item" href="/page-catalog.html">
+                                <span itemprop="name">Профиль</span>
+                            </a>
+                            <meta itemprop="position" content="2" />
+                        </li>
+                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <span class="breadcrumbs-list__current-page"itemprop="name" aria-current="page">Корзина</span>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Basket Heading -->
+        <section class="basket-heading">
+            <div class="wrapper">
+                <h1 class="basket-heading__title">Корзина
+                    <span class="basket-heading__count-value">(2)</span>
+                </h1>
+            </div>
+        </section>
+
+        <!-- Basket -->
+        <section class="basket basket--not-empty">
+            <div class="wrapper">
+                <div class="basket-content">
+                    <div class="basket-main-content">
+                        <h2 class="visually-hidden">Product List</h2>
+                        <!-- Basket Product List -->
+                        <ul class="basket-product-list">
+                            <li class="basket-product">
+                                <a class="basket-product-image" href="#">
+                                    <img src="img/detailed-product/detai-product-1.jpg" alt="" srcset="">
+                                </a>
+                                <div class="basket-product-info">
+                                    <h3 class="basket-product-info__title">Berg Coda Electric Walnut Wireless Remote Control</h3>
+                                    <ul class="basket-product-info-chars">
+                                        <li class="basket-product-info-char">
+                                            <span class="basket-product-info-chars__label">Цвет: </span>
+                                            <span class="basket-product-info-chars__value">молочный</span>
+                                        </li>
+                                        <li class="basket-product-info-char">
+                                            <span class="basket-product-info-chars__label">Ручки: </span>
+                                            <span class="basket-product-info-chars__value">круглые</span>
+                                        </li>
+                                        <li class="basket-product-info-char">
+                                            <span class="basket-product-info-chars__label">Материал: </span>
+                                            <span class="basket-product-info-chars__value">кожа</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="basket-product-counter">
+                                    <button class="basket-product-counter__btn" type="button" data-type="minus" data-id="1" disabled="true">
+                                        <svg class="basket-product-counter__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                                        </svg>
+                                    </button>
+                                    <input class="basket-product-counter__value" type="text" value="1" data-id="1" data-available-cnt="42" maxlength="2">
+                                    <button class="basket-product-counter__btn" type="button" data-type="plus"data-id="1">
+                                        <svg class="basket-product-counter__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="basket-product-price">
+                                    <span class="basket-product-price__cost">1 200</span>
+                                    <span class="basket-product-price__currency">$</span>
+                                </div>
+                                <div class="basket-product-controls">
+                                    <button data-title="to compare" data-id="1" class="compare-btn">
+                                        <svg class="compare-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-compare"></use>
+                                        </svg>
+                                    </button>
+                                    <button data-title="to favorite" data-id="1" class="favorite-btn">
+                                        <svg class="favorite-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <button class="basket-product-delete-btn" type="button">
+                                    <svg class="basket-product-delete-btn__icon icon">
+                                        <use xlink:href="img/sprite.svg#icon-cross"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="basket-product">
+                                <a class="basket-product-image" href="#">
+                                    <img src="img/detailed-product/detai-product-1.jpg" alt="" srcset="">
+                                </a>
+                                <div class="basket-product-info">
+                                    <h3 class="basket-product-info__title">Berg Coda Electric Walnut Wireless Remote Control</h3>
+                                    <ul class="basket-product-info-chars">
+                                        <li class="basket-product-info-char">
+                                            <span class="basket-product-info-chars__label">Цвет: </span>
+                                            <span class="basket-product-info-chars__value">молочный</span>
+                                        </li>
+                                        <li class="basket-product-info-char">
+                                            <span class="basket-product-info-chars__label">Ручки: </span>
+                                            <span class="basket-product-info-chars__value">круглые</span>
+                                        </li>
+                                        <li class="basket-product-info-char">
+                                            <span class="basket-product-info-chars__label">Материал: </span>
+                                            <span class="basket-product-info-chars__value">кожа</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="basket-product-counter">
+                                    <button class="basket-product-counter__btn" type="button" data-type="minus" data-id="1" disabled="true">
+                                        <svg class="basket-product-counter__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                                        </svg>
+                                    </button>
+                                    <input class="basket-product-counter__value" type="text" value="1" data-id="1" data-available-cnt="42" maxlength="2">
+                                    <button class="basket-product-counter__btn" type="button" data-type="plus"data-id="1">
+                                        <svg class="basket-product-counter__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="basket-product-price">
+                                    <span class="basket-product-price__cost">1 200</span>
+                                    <span class="basket-product-price__currency">$</span>
+                                </div>
+                                <div class="basket-product-controls">
+                                    <button data-title="to compare" data-id="1" class="compare-btn">
+                                        <svg class="compare-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-compare"></use>
+                                        </svg>
+                                    </button>
+                                    <button data-title="to favorite" data-id="1" class="favorite-btn">
+                                        <svg class="favorite-btn__icon icon">
+                                            <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <button class="basket-product-delete-btn" type="button">
+                                    <svg class="basket-product-delete-btn__icon icon">
+                                        <use xlink:href="img/sprite.svg#icon-cross"></use>
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <aside class="basket-aside-content">
+                        <div class="order-details">
+                            <h2 class="order-details__title">Детали заказа</h2>
+                            <div class="order-details-summary">
+                                <div class="order-details-info">
+                                    <p class="order-details-info__label">Итого:</p>
+                                    <p class="order-details-positions">
+                                        <span class="order-details-positions__count">2</span>
+                                        <span class="order-details-positions__label">позиции</span>
+                                    </p>
+                                </div>
+                                <div class="order-details-price">
+                                    <span class="order-details-price__total">2 650</span>
+                                    <span class="order-details-price__currency">$</span>
+                                </div>
+                            </div>
+                            <a class="order-details__link" href="#">перейти к оформлению</a>
+                        </div>
+                        <div class="basket-additional-info">
+                            <!-- 1 -->
+                            <div class="basket-dropdown">
+                                <button class="basket-dropdown-btn" type="button">
+                                    <svg class="basket-dropdown-btn__icon icon">
+                                        <use xlink:href="img/sprite.svg#icon-card"></use>
+                                    </svg>
+                                    <span class="basket-dropdown-btn__text">Оплата</span>
+                                </button>
+                                <div class="basket-dropdown-content">
+                                    <p>
+                                        Бесплатно в пределах МКАД
+                                        (при заказе от 4 000 )
+                                        Стоимость доставки заказов
+                                        до 4 000  — 490 
+                                        Доставка по МО:
+                                        До 30 км от МКАД — 80  за километр
+                                        При подтверждении заказа
+                                        до 22:00 доставка осуществляется
+                                        на следующий день
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="basket-dropdown">
+                                <button class="basket-dropdown-btn" type="button">
+                                    <svg class="basket-dropdown-btn__icon icon">
+                                        <use xlink:href="img/sprite.svg#icon-delivery"></use>
+                                    </svg>
+                                    <span class="basket-dropdown-btn__text">Доставка</span>
+                                </button>
+                                <div class="basket-dropdown-content">
+                                    <p></p>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="basket-dropdown">
+                                <button class="basket-dropdown-btn" type="button">
+                                    <svg class="basket-dropdown-btn__icon icon">
+                                        <use xlink:href="img/sprite.svg#icon-exchange"></use>
+                                    </svg>
+                                    <span class="basket-dropdown-btn__text">Возврат и обмен товаров</span>
+                                </button>
+                                <div class="basket-dropdown-content">
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <a class="footer-logo" href="/">
+                    <img src="img/footer-logo.svg" alt="">
+                </a>
+                <!-- Navigation -->
+                <div class="footer-navigation">
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Каталог</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">О компании</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Бренды</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Отзывы</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Производство</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Новости</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Реквизиты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Контакты</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">+7 (000) 000-00-00</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">example@gmail.com</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Address</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Social -->
+                <div class="footer-social">
+                    <ul class="footer-social-list">
+                        <li class="footer-social-list__item">
+                            <a class="footer-social-list__link" href="#" target="_blank">
+                                <img class="footer-social-list__icon" src="" alt="" >
+                            </a>
+                        </li>
+                        <li class="footer-social-list__item">
+                            <a class="footer-social-list__link" href="#" target="_blank">
+                                <img class="footer-social-list__icon" src="" alt="" >
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Subscribe -->
+                <div class="footer-subscribe">
+                    <h2 class="footer-subscribe__title">Follow our news</h2>
+                    <form class="footer-form-subscribe" action="post">
+                        <input class="footer-form-subscribe__input" type="text" placeholder="e-mail">
+                        <button class="footer-form-subscribe__btn" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom-content">
+                <ul class="footer-bottom-content-list">
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Политика конфиденциальности</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Согласие на обработку персональных данных</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Копирайт</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Разработка веб-дизайна</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
