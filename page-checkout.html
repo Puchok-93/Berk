@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 </head>
 
-<body id="page-basket">
+<body id="page-order-placing">
     <!-- Header -->
     <header class="header">
         <div class="wrapper">
@@ -249,164 +249,152 @@
 
     <!-- Содержимое страницы -->
     <main>
-        <!-- Breadcrumbs -->
-        <section class="breadcrumbs">
+        <!-- Order Heading -->
+        <section class="order-placing-heading">
             <div class="wrapper">
-                <nav aria-label="Breadcrumb">
-                    <ol class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList">
-                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <a class="breadcrumbs-list__link" itemprop="item" href="/">
-                                <span itemprop="name">Главная</span>
-                            </a>
-                            <meta itemprop="position" content="1" />
-                        </li>
-                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <a class="breadcrumbs-list__link" itemprop="item" href="/page-catalog.html">
-                                <span itemprop="name">Профиль</span>
-                            </a>
-                            <meta itemprop="position" content="2" />
-                        </li>
-                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            <span class="breadcrumbs-list__current-page"itemprop="name" aria-current="page">Корзина</span>
-                            <meta itemprop="position" content="3" />
-                        </li>
-                    </ol>
-                </nav>
+                <a class="order-placing__back" href="#">Назад в корзину</a>
             </div>
         </section>
 
-        <!-- Basket Heading -->
-        <section class="basket-heading">
+        <!-- Order -->
+        <section class="order-placing">
             <div class="wrapper">
-                <h1 class="basket-heading__title">Корзина
-                    <span class="basket-heading__count-value">(2)</span>
-                </h1>
-            </div>
-        </section>
+                <form class="order-placing-form" method="POST">
+                    <div class="order-placing-main-content">
+                        <h1 class="order-placing__title">Оформление заказа</h1>
 
-        <!-- Basket -->
-        <section class="basket basket--not-empty">
-            <div class="wrapper">
-                <div class="basket-content">
-                    <div class="basket-main-content">
-                        <h2 class="visually-hidden">Product List</h2>
-                        <!-- Basket Product List -->
-                        <ul class="basket-product-list">
-                            <li class="basket-product" data-product-id="1" data-product-price="1000" data-product-count="1">
-                                <a class="basket-product-image" href="page-product.html">
-                                    <img src="img/detailed-product/detai-product-1.jpg" alt="" srcset="">
-                                </a>
-                                <div class="basket-product-info">
-                                    <h3 class="basket-product-info__title">Berg Coda Electric Walnut Wireless Remote Control</h3>
-                                    <ul class="basket-product-info-chars">
-                                        <li class="basket-product-info-char">
-                                            <span class="basket-product-info-chars__label">Цвет: </span>
-                                            <span class="basket-product-info-chars__value">молочный</span>
-                                        </li>
-                                        <li class="basket-product-info-char">
-                                            <span class="basket-product-info-chars__label">Ручки: </span>
-                                            <span class="basket-product-info-chars__value">круглые</span>
-                                        </li>
-                                        <li class="basket-product-info-char">
-                                            <span class="basket-product-info-chars__label">Материал: </span>
-                                            <span class="basket-product-info-chars__value">кожа</span>
-                                        </li>
-                                    </ul>
+                        <!-- Данные покупателя -->
+                        <div class="order-placing-block">
+                            <h2 class="order-placing-block__title">Данные покупателя</h2>
+                            <div class="order-placing-block-content">
+                                <div class="order-placing-input-block">
+                                    <input 
+                                        class="order-placing-input-block__input"
+                                        placeholder="Имя"
+                                        type="text"
+                                        name="user-name"
+                                        value=""
+                                        required>
                                 </div>
-                                <div class="basket-product-counter">
-                                    <button class="basket-product-counter__btn" type="button" data-type="minus" data-id="1">
-                                        <svg class="basket-product-counter__icon icon">
-                                            <use xlink:href="img/sprite.svg#icon-minus"></use>
-                                        </svg>
-                                    </button>
-                                    <input class="basket-product-counter__value" type="text" value="1" data-id="1" data-available-cnt="42" maxlength="2">
-                                    <button class="basket-product-counter__btn" type="button" data-type="plus" data-id="1">
-                                        <svg class="basket-product-counter__icon icon">
-                                            <use xlink:href="img/sprite.svg#icon-plus"></use>
-                                        </svg>
-                                    </button>
+                                <div class="order-placing-input-block">
+                                    <input 
+                                        class="order-placing-input-block__input"
+                                        placeholder="Фамилия"
+                                        type="text"
+                                        name="user-surname"
+                                        value=""
+                                        required>
                                 </div>
-                                <div class="basket-product-price">
-                                    <span class="basket-product-price__cost">1 000</span>
-                                    <span class="basket-product-price__currency">$</span>
+                                <div class="order-placing-input-block">
+                                    <input 
+                                        class="order-placing-input-block__input"
+                                        placeholder="E-mail"
+                                        type="text"
+                                        name="user-email"
+                                        value=""
+                                        required>
                                 </div>
-                                <div class="basket-product-controls">
-                                    <button data-title="to compare" data-id="1" class="compare-btn">
-                                        <svg class="compare-btn__icon icon">
-                                            <use xlink:href="img/sprite.svg#icon-compare"></use>
-                                        </svg>
-                                    </button>
-                                    <button data-title="to favorite" data-id="1" class="favorite-btn">
-                                        <svg class="favorite-btn__icon icon">
-                                            <use xlink:href="img/sprite.svg#icon-favorite"></use>
-                                        </svg>
-                                    </button>
+                                <div class="order-placing-input-block">
+                                    <input 
+                                        class="order-placing-input-block__input"
+                                        placeholder="Номер телефона"
+                                        type="text"
+                                        name="user-phone"
+                                        value=""
+                                        required>
                                 </div>
-                                <button class="basket-product-delete-btn" type="button">
-                                    <svg class="basket-product-delete-btn__icon icon">
-                                        <use xlink:href="img/sprite.svg#icon-cross"></use>
-                                    </svg>
-                                </button>
-                            </li>
-                            <li class="basket-product" data-product-id="2" data-product-price="2000" data-product-count="1">
-                                <a class="basket-product-image" href="page-product.html">
-                                    <img src="img/detailed-product/detai-product-1.jpg" alt="" srcset="">
-                                </a>
-                                <div class="basket-product-info">
-                                    <h3 class="basket-product-info__title">Berg Coda Electric Walnut Wireless Remote Control</h3>
-                                    <ul class="basket-product-info-chars">
-                                        <li class="basket-product-info-char">
-                                            <span class="basket-product-info-chars__label">Цвет: </span>
-                                            <span class="basket-product-info-chars__value">молочный</span>
-                                        </li>
-                                        <li class="basket-product-info-char">
-                                            <span class="basket-product-info-chars__label">Ручки: </span>
-                                            <span class="basket-product-info-chars__value">круглые</span>
-                                        </li>
-                                        <li class="basket-product-info-char">
-                                            <span class="basket-product-info-chars__label">Материал: </span>
-                                            <span class="basket-product-info-chars__value">кожа</span>
-                                        </li>
-                                    </ul>
+                            </div>
+                        </div>
+
+                        <!-- Данные доставки -->
+                        <div class="order-placing-block">
+                            <h2 class="order-placing-block__title">Адрес доставки</h2>
+                            <div class="order-placing-block-content order-placing-block-content--custom-layout">
+                                <div class="order-placing-block-inputs">
+                                    <div class="order-placing-input-block address-field address-field--house">
+                                        <input 
+                                        class="order-placing-input-block__input"
+                                        placeholder="Номер дома"
+                                        type="text"
+                                        name="address-house"
+                                        value=""
+                                        required>
+                                    </div>
+                                    <div class="order-placing-input-block address-field address-field--street">
+                                        <input 
+                                        class="order-placing-input-block__input"
+                                        placeholder="Улица"
+                                        type="text"
+                                        name="address-street"
+                                        value=""
+                                        required>
+                                    </div>
+                                    <div class="order-placing-input-block address-field address-field--flat">
+                                        <input 
+                                        class="order-placing-input-block__input"
+                                        placeholder="Кв/офис"
+                                        type="text"
+                                        name="address-flat"
+                                        value=""
+                                        equired>
+                                    </div>
+                                    <div class="order-placing-input-block address-field address-field--region">
+                                        <input 
+                                        class="order-placing-input-block__input"
+                                        placeholder="Регион"
+                                        type="text"
+                                        name="address-region"
+                                        value=""
+                                        required>
+                                    </div>
+                                    <div class="order-placing-input-block address-field address-field--postalcode">
+                                        <input 
+                                        class="order-placing-input-block__input"
+                                        placeholder="Индекс"
+                                        type="text"
+                                        name="address-postalcode"
+                                        value=""
+                                        required>
+                                    </div>
+                                    <div class="order-placing-input-block address-field address-field--comment">
+                                        <textarea rows="1" name="comment" placeholder="Комментарий"></textarea>
+                                    </div>
                                 </div>
-                                <div class="basket-product-counter">
-                                    <button class="basket-product-counter__btn" type="button" data-type="minus" data-id="1">
-                                        <svg class="basket-product-counter__icon icon">
-                                            <use xlink:href="img/sprite.svg#icon-minus"></use>
-                                        </svg>
-                                    </button>
-                                    <input class="basket-product-counter__value" type="text" value="1" data-id="1" data-available-cnt="42" maxlength="2">
-                                    <button class="basket-product-counter__btn" type="button" data-type="plus" data-id="1">
-                                        <svg class="basket-product-counter__icon icon">
-                                            <use xlink:href="img/sprite.svg#icon-plus"></use>
-                                        </svg>
-                                    </button>
+                                <div class="map">
+                                    <iframe
+                                        src="https://www.google.com/maps?q=Dubai&z=12&output=embed"
+                                        width="100%"
+                                        height="450"
+                                        style="border:0;"
+                                        loading="lazy">
+                                    </iframe>
                                 </div>
-                                <div class="basket-product-price">
-                                    <span class="basket-product-price__cost">2 000</span>
-                                    <span class="basket-product-price__currency">$</span>
+                            </div>
+                        </div>
+
+                        <!-- Способы оплаты -->
+                        <div class="order-placing-block">
+                            <h2 class="order-placing-block__title">Способ оплаты</h2>
+                            <div class="order-placing-block-content order-placing-block-content--payment">
+                                <div class="order-placing-block-inputs order-placing-block-inputs--payments">
+                                    <div class="order-placing-input-block payment-method">
+                                        <input class="payment-method__input" id="card" name="payment-method" type="radio" checked>
+                                        <label class="payment-method__label" for="card">
+                                            <img src="img/order/paymant-method-1.png" alt="">
+                                        </label>
+                                    </div>
+                                    <div class="order-placing-input-block payment-method">
+                                        <input class="payment-method__input" id="paypal" name="payment-method" type="radio">
+                                        <label class="payment-method__label" for="paypal">
+                                            <img src="img/order/paymant-method-2.png" alt="">
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="basket-product-controls">
-                                    <button data-title="to compare" data-id="1" class="compare-btn">
-                                        <svg class="compare-btn__icon icon">
-                                            <use xlink:href="img/sprite.svg#icon-compare"></use>
-                                        </svg>
-                                    </button>
-                                    <button data-title="to favorite" data-id="1" class="favorite-btn">
-                                        <svg class="favorite-btn__icon icon">
-                                            <use xlink:href="img/sprite.svg#icon-favorite"></use>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <button class="basket-product-delete-btn" type="button">
-                                    <svg class="basket-product-delete-btn__icon icon">
-                                        <use xlink:href="img/sprite.svg#icon-cross"></use>
-                                    </svg>
-                                </button>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
+
                     </div>
-                    <aside class="basket-aside-content">
+                    <aside class="order-placing-aside-content">
                         <div class="order-details">
                             <h2 class="order-details__title">Детали заказа</h2>
                             <div class="order-details-summary">
@@ -422,64 +410,20 @@
                                     <span class="order-details-price__currency">$</span>
                                 </div>
                             </div>
-                            <a class="order-details__link" href="#">перейти к оформлению</a>
-                        </div>
-                        <div class="basket-additional-info">
-                            <!-- 1 -->
-                            <div class="basket-dropdown">
-                                <button class="basket-dropdown-btn" type="button">
-                                    <svg class="basket-dropdown-btn__icon icon">
-                                        <use xlink:href="img/sprite.svg#icon-card"></use>
-                                    </svg>
-                                    <span class="basket-dropdown-btn__text">Оплата</span>
-                                </button>
-                                <div class="basket-dropdown-content">
-                                    <p>
-                                        Вы можете купить товар в рассрочку без первоначальных взносов и переплат. 
-                                        Оформить ее можно как при покупке в розничных магазинах, так и на нашем сайте.
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- 2 -->
-                            <div class="basket-dropdown">
-                                <button class="basket-dropdown-btn" type="button">
-                                    <svg class="basket-dropdown-btn__icon icon">
-                                        <use xlink:href="img/sprite.svg#icon-delivery"></use>
-                                    </svg>
-                                    <span class="basket-dropdown-btn__text">Доставка</span>
-                                </button>
-                                <div class="basket-dropdown-content">
-                                    <p>
-                                        Бесплатно в пределах МКАД
-                                        (при заказе от 4 000 )
-                                        Стоимость доставки заказов
-                                        до 4 000  — 490 
-                                        Доставка по МО:
-                                        До 30 км от МКАД — 80  за километр
-                                        При подтверждении заказа
-                                        до 22:00 доставка осуществляется
-                                        на следующий день
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- 3 -->
-                            <div class="basket-dropdown">
-                                <button class="basket-dropdown-btn" type="button">
-                                    <svg class="basket-dropdown-btn__icon icon">
-                                        <use xlink:href="img/sprite.svg#icon-exchange"></use>
-                                    </svg>
-                                    <span class="basket-dropdown-btn__text">Возврат и обмен товаров</span>
-                                </button>
-                                <div class="basket-dropdown-content">
-                                    <p>
-                                        Право потребителя на обмен товара надлежащего 
-                                        качества регламентируется п.1 ст. 25 Закона «О Защите прав потребителя», который гласит:
-                                    </p>
-                                </div>
+                            <button id="saveOrder" class="order-details__submit" type="submit">оплатить</button>
+                            <div class="confirm-personal-data">
+                                <input id="confirm-personal-data" class="confirm-personal-data__input" name="" value="" type="checkbox"checked="">
+                                <label class="confirm-personal-data-label" for="confirm-personal-data">
+                                        <span class="confirm-personal-data-label__checkbox"></span>
+                                        <span class="confirm-personal-data-label__text">
+                                            Подтверждая заказ, Вы соглашаетесь с условиями 
+                                            персональных данных и правилами продажи
+                                        </span>
+                                </label>
                             </div>
                         </div>
                     </aside>
-                </div>
+                </form>
             </div>
         </section>
     </main>

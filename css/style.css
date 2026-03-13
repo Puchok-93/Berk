@@ -18,6 +18,7 @@
     13. FILTERS
     14. DETALED PRODUCT
     15. BASKET
+    16. ORDER
 
 ================================ */
 
@@ -2576,6 +2577,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     height: 16px;
     stroke: #858176;
     stroke-width: 2px;
+    pointer-events: none;
 }
 
 .basket-product-counter__value {
@@ -2680,6 +2682,15 @@ input[type="range"]::-webkit-slider-thumb:active {
     margin: 5px 0 0;
 }
 
+.order-details__submit {
+    font: 400 1.25rem / 1 var(--font-roboto);
+    text-align: center;
+    color: var(--base-color-dark);
+    background-color: #BEB6A8;
+    padding: 22px 0 20px;
+    margin: 5px 0 0;
+}
+
 /* #endregion */
 
 /* #region ======== 15.5 Basket Additinal Info  ======== */
@@ -2768,9 +2779,261 @@ input[type="range"]::-webkit-slider-thumb:active {
     padding: 20px 0 0;
 }
 
+/* #endregion */
+
 .basket + .viewed-products {
     padding: 90px 0;
 }
+
+/* #endregion */
+
+/* #region ================================= 16. Order ================================= */
+    /* ================================ Order CONTENTS
+        16.1 Order Heading
+        16.2 Order Placing
+        16.3 Order Form
+        16.4 Order Confirm Personal Data
+    ================================ */
+
+/* #region ======== 16.1 Order Heading  ======== */
+    .order-placing-heading {
+        padding: 22px 0;
+    }
+
+    .order-placing__back {
+        display: block;
+        position: relative;
+        font: 400 1.25rem / 1.4 var(--font-roboto);
+        color: var(--base-color-dark);
+        padding: 0 0 0 28px;
+    }
+
+    .order-placing__back::before,
+    .order-placing__back::after {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 2px;
+        top: 11px;
+        left: 0;
+        background-color: var(--base-color-dark);
+        border-radius: 2px;
+        transform: rotate(-45deg);
+    }
+
+    .order-placing__back::after {
+        top: 16px;
+        transform: rotate(45deg);
+    }
+
+/* #endregion */
+
+/* #region ======== 16.2 Order Placing  ======== */
+.order-placing  {
+    padding: 0 0 120px;
+}
+
+.order-placing-form {
+    display: flex;
+    gap: 20px;
+}
+
+.order-placing-aside-content {
+    width: 100%;
+    max-width: 567px;
+    flex-shrink: 0;
+}
+
+/* #endregion */
+
+/* #region ======== 16.3 Order Form  ======== */
+
+.order-placing-main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #E3DFD9;
+    border-radius: 3px;
+    padding: 40px;
+}
+
+.order-placing__title {
+    font: 500 1.75rem / 1 var(--font-roboto);
+    text-transform: uppercase;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+    color: var(--base-color-dark);
+}
+
+.order-placing-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-placing-block__title {
+    font: 500 1.25rem / 1 var(--font-roboto);
+    text-transform: uppercase;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+    color: var(--base-color-dark);
+}
+
+.order-placing-block-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.order-placing-input-block input[type="text"],
+.order-placing-input-block textarea {
+    width: 100%;
+    font: 400 1rem / 1 var(--font-roboto);
+    color: var(--base-color-dark);
+    background-color: #FCF9F6;
+    border: 2px solid #9F9F9F;
+    border-radius: 3px;
+    padding: 17px 18px 16px 18px;
+}
+
+.order-placing-input-block textarea {
+    resize: none;
+}
+
+.order-placing-input-block textarea:focus {
+    outline: none;
+}
+
+.order-placing-input-block input::placeholder,
+.order-placing-input-block textarea::placeholder {
+    font: 400 1rem / 1 var(--font-roboto);
+    color: #9F9F9F;
+}
+
+.order-placing-input-block input.js-error {
+    border-color: #ed4261;
+}
+
+.order-placing-input-block input.js-error + .js-error-message {
+    display: block;
+    margin: 5px 0 0;
+    color: #ed4261;
+    font: 400 1rem / 1 var(--font-roboto);
+}
+
+.order-placing-block-content--custom-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-placing-block-inputs {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+}
+
+.order-placing-block-inputs--payments {
+    display: flex;
+}
+
+.address-field--house {
+    grid-area: 1 / 1 / 2 / 5;
+}
+
+.address-field--street {
+    grid-area: 1 / 5 / 2 / 9;
+}
+
+.address-field--flat {
+    grid-area: 1 / 9 / 2 / 13;
+}
+
+.address-field--region {
+    grid-area: 2 / 1 / 3 / 7;
+}
+
+.address-field--postalcode {
+    grid-area: 2 / 7 / 3 / 13;
+}
+
+.address-field--comment {
+    grid-area: 3 / 1 / 4 / -1;
+}
+
+.map {
+    border-radius: 3px;
+    overflow: hidden;
+    max-height: 400px;
+}
+
+.order-placing-block-content--payment {
+    display: block;
+}
+
+.payment-method {
+    display: flex;
+    width: 100%;
+    max-width: 177px;
+}
+
+.payment-method__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #FCF9F6;
+    border: 2px solid #9F9F9F;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 15px 0;
+}
+
+.payment-method__label img {
+    width: auto;
+}
+
+.payment-method__input:checked + .payment-method__label {
+    border-color: var(--base-color-dark);
+}
+
+/* #endregion */
+
+/* #region ======== 16.4 Order Confirm Personal Data  ======== */
+
+.confirm-personal-data {
+        margin: -30px 0 0 0;
+}
+
+.confirm-personal-data-label {
+    position: relative;
+    cursor: pointer;
+}
+
+.confirm-personal-data-label__checkbox {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #9F9F9F;
+}
+
+.confirm-personal-data-label__text {
+    display: block;
+    font: 400 1rem / 1.4 var(--font-roboto);
+    color: var(--base-color-dark);
+    padding: 2px 0 0 40px;
+}
+
+.confirm-personal-data__input:checked + .confirm-personal-data-label .confirm-personal-data-label__checkbox {
+    background: url(../img/icon-check.svg) center / 15px 11px no-repeat;
+}
+
+/* #endregion */
+
+/* #endregion */
+
 
 @media(max-width: 1920px) {
     /* #region ================================= 1920px ABOUT COMPANY ================================= */

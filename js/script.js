@@ -1,3 +1,16 @@
+/* Универсальные методы */
+
+// Инициализация выпадающих списков 
+function initDropDown(trigger) {
+    const triggers = document.querySelectorAll(trigger);
+    triggers.forEach(el => {
+        el.addEventListener("click", () => {
+            const parent = el.parentElement;
+            parent.classList.toggle("js-active");
+        });
+    });
+}
+
 function initHeaderMethods(){
     function initHeaderMenu() {
         const headerMenu = document.querySelector('.header-menu');
@@ -392,16 +405,6 @@ function initDetailProductMethods() {
     
     if(!detailedProduct) return;
     
-    function initDropDown() {
-        const deatailProductOptionBtns = document.querySelectorAll(".detailed-product-option__btn");
-        deatailProductOptionBtns.forEach(optionBtn => {
-            optionBtn.addEventListener("click", () => {
-                const option = optionBtn.parentElement;
-                option.classList.toggle("js-active");
-            });
-        });
-    }
-
     function initSelectVariations() {
         const productVariations = document.querySelectorAll('.detailed-product-select-variation');
 
@@ -474,6 +477,88 @@ function initDetailProductMethods() {
     initSelectVariations();
     initProductGallery();
     initTabs();
+    initDropDown('.detailed-product-option__btn');
+}
+
+function initBasetMethods() {
+    const pageBasket = document.getElementById('page-basket');
+
+    if(!pageBasket) return;
+
+    const totalCost = document.querySelector('.order-details-price__total');
+    const totalQuantity = document.querySelector('.order-details-positions__count');
+
+    function calcTotalCost() {
+        const products = document.querySelectorAll('.basket-product');
+        if(products.length === 0) return;
+
+        const total = [...products].reduce((sum, product) => {
+            const price = Number(product.dataset.productPrice);
+            const quantity = Number(product.querySelector('.basket-product-counter__value').value);
+            return sum + price * quantity;
+        }, 0);
+
+        totalCost.textContent = total;
+    }
+
+    function calcTotalPosition() {
+        const products = document.querySelectorAll('.basket-product');
+
+        if(products.length === 0) return;
+
+        let productsQuantity = 0;
+        
+        products.forEach(product => {
+            const quantity = Number(product.querySelector('.basket-product-counter__value').value);
+            productsQuantity += quantity;
+        });
+
+        totalQuantity.textContent = productsQuantity;
+    }
+
+    function initProductCounter() {
+        const products = document.querySelectorAll('.basket-product');
+        
+        if(products.length === 0) return;
+
+        let totalCost;
+
+        products.forEach(product => {
+            const productCounter = product.querySelector('.basket-product-counter');
+            const productPrice = product.dataset.productPrice;
+            let productCost = product.querySelector('.basket-product-price__cost');
+            
+            totalCost += product.dataset.productPrice;
+
+            productCounter.addEventListener('click', (e) => {
+                const target = e.target.closest('.basket-product-counter__btn');
+                const targetType = target.dataset.type;
+                const counter = productCounter.querySelector('.basket-product-counter__value');
+
+                if(targetType === 'plus') {
+                    counter.value = +counter.value + 1;
+                    productCost.textContent = productPrice * counter.value;
+                    calcTotalCost();
+                    calcTotalPosition();
+                } else if(targetType === 'minus') {
+                    if (counter.value > 1) {
+                        counter.value = +counter.value - 1;
+                        productCost.textContent = productPrice * counter.value;
+                        target.disabled = false;
+                    } else {
+                        target.disabled = true;
+                    }
+                    calcTotalCost();
+                    calcTotalPosition();
+                }
+            })
+        });
+    }
+
+    initProductCounter();
+    initDropDown('.basket-dropdown-btn');
+    calcTotalCost();
+    calcTotalPosition();
 }
 
 function init() {
@@ -481,6 +566,7 @@ function init() {
     initMainPageMethods()
     initCatalogMethods();
     initDetailProductMethods();
+    initBasetMethods();
 }
 
 document.addEventListener('DOMContentLoaded', init);
