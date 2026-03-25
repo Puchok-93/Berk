@@ -561,12 +561,63 @@ function initBasetMethods() {
     calcTotalPosition();
 }
 
+function initCompareMethods() {
+
+    function initCompareProductsScroll() {
+        const GAP = 30;
+        const container = document.querySelector('.compare-products-inner-wrapper');
+        const btnLeft = document.querySelector('.scroll-btn--left');
+        const btnRight = document.querySelector('.scroll-btn--right');
+        const item = container.querySelector('.compare-property__value');
+        const scrollStep = item.offsetWidth + GAP;
+
+        btnLeft.addEventListener('click', () => {
+            container.scrollBy({
+                left: -scrollStep,
+                behavior: 'smooth'
+            });
+        });
+
+        btnRight.addEventListener('click', () => {
+            container.scrollBy({
+                left: scrollStep,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    function initDifferencesChars() {
+        const toggle = document.getElementById('differences-chars-btn');
+
+        toggle.addEventListener('click', () => {
+            toggle.classList.toggle('js-active');
+
+            const compareProperties = document.querySelectorAll('.compare-property');
+            compareProperties.forEach(prop => {
+                
+                const values = Array.from(prop.querySelectorAll('.compare-property__value')).map(el => el.textContent.trim());
+
+                const allEqual = values.every(v => v === values[0]);
+                if (allEqual && toggle.classList.contains('js-active')) {
+                    prop.style.display = 'none';
+                } else {
+                    prop.style.display = '';
+                }
+            });
+        });
+    }
+
+    initCompareProductsScroll();
+    initDifferencesChars();
+}
+
 function init() {
     initHeaderMethods();
     initMainPageMethods()
     initCatalogMethods();
     initDetailProductMethods();
     initBasetMethods();
+    initCompareMethods();
 }
 
 document.addEventListener('DOMContentLoaded', init);
