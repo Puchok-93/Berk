@@ -563,11 +563,13 @@ function initBasetMethods() {
 
 function initCompareMethods() {
 
+    const compare = document.getElementById('page-compare');
+
     function initCompareProductsScroll() {
         const GAP = 30;
         const container = document.querySelector('.compare-products-inner-wrapper');
-        const btnLeft = document.querySelector('.scroll-btn--left');
-        const btnRight = document.querySelector('.scroll-btn--right');
+        const btnLeft = document.querySelector('.compare-scroll-btn--left');
+        const btnRight = document.querySelector('.compare-scroll-btn--right');
         const item = container.querySelector('.compare-property__value');
         const scrollStep = item.offsetWidth + GAP;
 
@@ -607,8 +609,43 @@ function initCompareMethods() {
         });
     }
 
+    if(!compare) return;
+
     initCompareProductsScroll();
     initDifferencesChars();
+}
+
+function initPersonalMethods() {
+    
+    function initGenderSelect() {
+        const personal = document.getElementById('page-personal');
+
+        if(!personal) return;
+
+        const genderInputBlock = personal.querySelector('.input-block--gender');
+        const genderInput = genderInputBlock.querySelector('.input-block--gender input');
+        const genderList = personal.querySelector('.gender-list');
+
+        genderInput.addEventListener('click', (e) => {
+            const target = e.target.closest('.input-block--gender');
+
+            if(!target.classList.contains('js-active')) {
+                target.classList.add('js-active');
+            }
+        });
+
+        genderList.addEventListener('click', (e) => {
+            const item = e.target.closest('.gender-list__item')
+            const itemValue = item.dataset.gender;
+            
+            genderInput.value = itemValue;
+            document.querySelectorAll('.gender-list__item').forEach(el => el.classList.remove('js-selected'));
+            item.classList.add('js-selected');
+            genderInputBlock.classList.remove('js-active');
+        });
+    }
+
+    initGenderSelect();
 }
 
 function init() {
@@ -617,7 +654,8 @@ function init() {
     initCatalogMethods();
     initDetailProductMethods();
     initBasetMethods();
-    initCompareMethods();
+    // initCompareMethods();
+    initPersonalMethods();
 }
 
 document.addEventListener('DOMContentLoaded', init);

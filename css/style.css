@@ -22,6 +22,7 @@
     17. PAGE BANNER
     18. FAVORITE PAGE
     19. COMPARE PAGE
+    20. PERSONAL PAGE
 
 ================================ */
 
@@ -2701,7 +2702,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 .order-details__title {
-    font: 500 1.75rem / 1.4 var(--font-roboto);
+    font: 500 1.5rem / 1.4 var(--font-roboto);
     text-transform: uppercase;
     text-box-trim: trim-both;
     text-box-edge: cap alphabetic;
@@ -2764,7 +2765,8 @@ input[type="range"]::-webkit-slider-thumb:active {
     gap: 11px;
     border-radius: 3px;
     background-color: var(--base-color-soft-beige);
-    padding: 40px;
+    padding: 10px 40px 26px;
+    margin: -23px 0 0;
 }
 
 .basket-dropdown {
@@ -3122,12 +3124,10 @@ input[type="range"]::-webkit-slider-thumb:active {
 /* #endregion */
 
 /* #region ================================= 19. COMPARE  ================================= */
-    /* ================================ Order CONTENTS
-        19. Compare Heading
-        19. Compare Category Triggers
-        19. Compare
-        19. Compare
-        19. Compare Characteristics
+    /* ================================ Compare CONTENTS
+        19.1 Compare Heading
+        19.2 Compare Category Triggers
+        19.3 Compare Characteristics
 
     ================================ */
 
@@ -3253,7 +3253,7 @@ input[type="range"]::-webkit-slider-thumb:active {
         height: 32px;
         top: 2px;
         left: 2px;
-        background-color: var(--base-color-gray);
+        background-color: var(--base-color-light-beige);
         border-radius: 50%;
         transition: all 0.3s ease-in-out;
     }
@@ -3265,6 +3265,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     .differences-only-btn.js-active .differences-only-btn__toggler::before {
         transform: translate(100%, 0);
+        background-color: var(--base-color-gray);
     }
 
     .compare-characteristics-properties {
@@ -3322,6 +3323,262 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 /* #endregion */
 
+/* #region ================================= 20. PERSONAL  ================================= */
+    /* ================================ Personal CONTENTS
+        20.1 Personal Heading
+        20.2 Personal Aside
+        20.3 Personal Content
+    ================================ */
+
+    .personal {
+        padding: 60px 0 120px;
+    }
+
+    /* #region ======== 20.1 Personal Heading  ======== */
+    .personal-heading {      
+        background-color: var(--base-color-soft-beige);
+        border-radius: 3px;
+        padding: 46px 40px;
+    }
+
+    .personal-heading__title {
+        font: 500 1.5rem/1 var(--font-roboto);
+        text-transform: uppercase;
+        text-box-trim: trim-both;
+        text-box-edge: cap alphabetic;
+        color: var(--base-color-dark);
+    }
+
+    /* #endregion */
+
+    /* #region ======== 20.2 Personal Aside  ======== */
+
+    .personal-aside {
+        width: 100%;
+        max-width: 405px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-color: var(--base-color-soft-beige);
+        border-radius: 3px;
+        padding: 40px;
+    }
+
+    .personal-aside-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+    .personal-avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: var(--base-color-sand-beige);
+    }
+
+    .personal-avatar img {
+        object-fit: cover;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+    }
+
+    .personal-name {
+        font: 500 1.5rem/1.4 var(--font-roboto);
+        text-transform: uppercase;
+        color: var(--base-color-dark);
+    }
+
+    .personal-navigation {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .personal-navigation__link {
+        width: max-content;
+        font: 500 1.25rem/1 var(--font-roboto);
+        text-transform: uppercase;
+        text-box-trim: trim-both;
+        text-box-edge: cap alphabetic;
+        color: var(--base-color-dark);
+        position: relative;
+    }
+
+    .personal-navigation__link.is-active::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 2px;
+        bottom: -10px;
+        left: 0;
+        background-color: var(--base-color-dark);
+    }
+
+    /* #endregion */
+
+    /* #region ======== 20.3 Personal Content  ======== */
+    .personal-inner-box {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .personal-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .personal-inner-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        background-color: var(--base-color-soft-beige);
+        border-radius: 3px;
+        padding: 40px;
+    }
+    /* #endregion */
+
+    /* #region ======== 20.3 Personal Form  ======== */
+    .personal-user-data-form,
+    .change-user-password-form {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-width: 62.98%;
+    }
+
+    .form-group__title {
+        font: 500 1.25rem/1 var(--font-roboto);
+        text-box-trim: trim-both;
+        text-box-edge: cap alphabetic;
+        color: var(--base-color-dark);
+    }
+
+    .inputs-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    
+    .input-block input[type="text"],
+    .input-block input[type="password"] {
+        width: 100%;
+        font: 400 1rem / 1 var(--font-roboto);
+        color: var(--base-color-dark);
+        background-color: var(--base-color-sand-beige);
+        border: 2px solid var(--base-color-light-beige);
+        border-radius: 3px;
+        padding: 17px 18px 16px 18px;
+    }
+
+    .input-block input[type="password"] {
+        -webkit-text-security: disc;
+    }
+
+    .input-block input::placeholder {
+        font: 400 1rem / 1.4 var(--font-roboto);
+        color: var(--base-color-light-beige);
+    }
+
+    .form-submit-btn {
+        max-width: 31.07%;
+        font: 400 1.125rem / 1 var(--font-roboto);
+        text-align: center;
+        color: var(--base-color-dark);
+        text-transform: lowercase;
+        background-color: var(--base-color-light-beige);
+        padding: 22px 0 20px;
+        margin: -19px 0 0;
+    }
+
+    .input-block--gender {
+        position: relative;
+    }
+
+    .input-block--gender.js-active .gender-list {
+        display: flex;
+    }
+
+    .input-block--gender input {
+        position: relative;
+        cursor: pointer;
+    }
+
+    
+    .input-block--gender::before,
+    .input-block--gender::after {
+        position: absolute;
+        content: '';
+        width: 14px;
+        height: 2px;
+        background-color: var(--base-color-gray);
+        top: 27px;
+        transition: transform 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .input-block--gender::before {
+        transform: rotate(45deg);
+        right: 24px;
+    }
+
+    .input-block--gender::after {
+        transform: rotate(-45deg);
+        right: 15px;
+    }
+
+    .input-block--gender.js-active::before {
+        transform: rotate(-45deg);
+        right: 24px;
+    }
+
+    .input-block--gender.js-active::after {
+        transform: rotate(45deg);
+        right: 15px;
+    }
+
+    .gender-list {
+        position: absolute;
+        width: calc(100% - 4px);
+        left: 2px;
+        bottom: -68px;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: var(--base-color-sand-beige);
+        border-radius: 0 0 3px;
+        padding: 13px 20px;
+    }
+
+    .gender-list__item {
+        font: 400 1rem / 1 var(--font-roboto);
+        color: var(--base-color-gray);
+        cursor: pointer;
+    }
+
+    .gender-list__item:hover {
+        color: var(--base-color-light-beige);
+    }
+
+    .gender-list__item.js-selected {
+        color: var(--base-color-light-beige);
+        cursor: default;
+    }
+
+
+     /* #endregion */
+
+/* #endregion */
 .page-banner {
     padding: 60px 0;
 }
