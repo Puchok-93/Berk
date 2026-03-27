@@ -4,9 +4,9 @@
 function initDropDown(trigger) {
     const triggers = document.querySelectorAll(trigger);
     triggers.forEach(el => {
-        el.addEventListener("click", () => {
+        el.addEventListener('click', () => {
             const parent = el.parentElement;
-            parent.classList.toggle("js-active");
+            parent.classList.toggle('js-active');
         });
     });
 }
@@ -435,8 +435,8 @@ function initDetailProductMethods() {
             loop: true,
             spaceBetween: 20,
             navigation: {
-                nextEl: ".detailed-product-main-gallery-controls__control.swiper-button-next",
-                prevEl: ".detailed-product-main-gallery-controls__control.swiper-button-prev",
+                nextEl: '.detailed-product-main-gallery-controls__control.swiper-button-next',
+                prevEl: '.detailed-product-main-gallery-controls__control.swiper-button-prev',
             },
             thumbs: {
                 swiper: thumbs,
@@ -616,12 +616,10 @@ function initCompareMethods() {
 }
 
 function initPersonalMethods() {
+    const personal = document.getElementById('page-personal');
+    const orders = document.getElementById('page-personal-orders');
     
     function initGenderSelect() {
-        const personal = document.getElementById('page-personal');
-
-        if(!personal) return;
-
         const genderInputBlock = personal.querySelector('.input-block--gender');
         const genderInput = genderInputBlock.querySelector('.input-block--gender input');
         const genderList = personal.querySelector('.gender-list');
@@ -643,9 +641,87 @@ function initPersonalMethods() {
             item.classList.add('js-selected');
             genderInputBlock.classList.remove('js-active');
         });
+
+        document.addEventListener('click', (e) => {
+            if (!genderInputBlock.contains(e.target)) {
+                genderInputBlock.classList.remove('js-active');
+            }
+        });
     }
 
-    initGenderSelect();
+    function initValidateFiels() {
+        function validatePhoneNumber() {
+            const phone = document.getElementById('phone');
+            phone.addEventListener('input', (e) => {
+                e.target.value = e.target.value.replace(/[a-zA-Zа-яА-ЯёЁ]/g, '');
+                if (phone.value.trim() === '') {
+                    phone.value = '+';
+                    }
+            });
+        }
+
+        function validateBirthday() {
+            const birthday = document.getElementById('birthday');
+            birthday.addEventListener('input', (e) => {
+                e.target.value = e.target.value.replace(/[a-zA-Zа-яА-ЯёЁ]/g, '');
+            });
+        }
+
+        validatePhoneNumber();
+        validateBirthday();
+    }
+
+    function initToggleVisiblePass() {
+        const inputBlockPassword = document.querySelectorAll('.input-block--password');
+        
+        inputBlockPassword.forEach(inputBlock => {
+            const inputPassword = inputBlock.querySelector('input');
+            const visiblePassBtn = inputBlock.querySelector('.visible-pass-btn');
+
+            visiblePassBtn.addEventListener('click', (e) => {
+                const target = e.target.closest('.visible-pass-btn');
+                target.classList.toggle('js-active');
+                if(target.classList.contains('js-active')) {
+                    inputPassword.type = 'text';
+                } else {
+                    inputPassword.type = 'password';
+                }
+            })
+        })
+    }
+
+    function initConfirmNewPassword() {
+        const newPassInput = document.getElementById('new-password');
+        const confirmPassInput = document.getElementById('confirm-new-password');
+        const changePassBtn = document.getElementById('change-pass-btn');
+
+        function validatePasswords() {
+            if (
+                newPassInput.value.length > 0 &&
+                confirmPassInput.value.length > 0 &&
+                newPassInput.value === confirmPassInput.value
+            ) {
+                changePassBtn.disabled = false;
+            } else {
+                changePassBtn.disabled = true;
+            }
+        }
+
+        newPassInput.addEventListener('input', validatePasswords);
+        confirmPassInput.addEventListener('input', validatePasswords);
+
+    }
+
+    if(personal) {
+        initGenderSelect();
+        initValidateFiels();
+        initToggleVisiblePass();
+        initConfirmNewPassword();
+    } else if(orders) {
+        initDropDown('.order-info');
+    } else {
+        return;
+    };
 }
 
 function init() {

@@ -248,7 +248,6 @@
             </div>
         </div>
     </header>
-
     <!-- Содержимое страницы -->
     <main>
         <!-- Breadcrumbs -->
@@ -266,14 +265,13 @@
                         <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope
                             itemtype="https://schema.org/ListItem">
                             <span class="breadcrumbs-list__current-page" itemprop="name"
-                                aria-current="page">Профиль</span>
+                                aria-current="page">Profile</span>
                             <meta itemprop="position" content="3" />
                         </li>
                     </ol>
                 </nav>
             </div>
         </section>
-
         <!-- Personal -->
         <section class="personal">
             <div class="wrapper">
@@ -316,7 +314,7 @@
                                             <input name="last-name" type="text" data-validate-field="last-name" placeholder="Last Name">
                                         </div>
                                         <div class="input-block">
-                                            <input name="birthday" type="text" data-validate-field="birthday" placeholder="Date of Birth">
+                                            <input id="birthday" name="birthday" type="text" data-validate-field="birthday" placeholder="Date of Birth">
                                         </div>
                                         <div class="input-block input-block--gender">
                                             <input name="gender" type="text" data-validate-field="gender" placeholder="Gender" readonly>
@@ -334,7 +332,7 @@
                                             <input name="email" type="text" data-validate-field="email" id="" placeholder="E-mail">
                                         </div>
                                         <div class="input-block">
-                                            <input name="phone" type="text" data-validate-field="phone" placeholder="Phone">
+                                            <input id="phone" name="phone" type="text" data-validate-field="phone" placeholder="Phone">
                                         </div>
                                     </div>
                                 </div>
@@ -345,25 +343,38 @@
                                 <div class="form-group">
                                     <p class="form-group__title">Change password</p>
                                     <div class="inputs-group">
-                                        <div class="input-block">
-                                            <input name="new-password" type="password" data-validate-field="password" placeholder="New password" value="">
+                                        <div class="input-block input-block--password">
+                                            <input id="new-password" name="new-password" type="password" data-validate-field="password" placeholder="New password" value="">
+                                            <button class="visible-pass-btn" type="button">
+                                                <svg class="visible-pass-btn__icon visible-pass-btn__icon--eye icon">
+                                                    <use xlink:href="img/sprite.svg#icon-eye"></use>
+                                                </svg>
+                                                <svg class="visible-pass-btn__icon visible-pass-btn__icon--eye-off icon">
+                                                    <use xlink:href="img/sprite.svg#icon-eye-off"></use>
+                                                </svg>
+                                            </button>
                                         </div>
-                                        <div class="input-block">
-                                            <input name="confirm-new-password" type="password" data-validate-field="confirm-new-password" placeholder="Password confirmation" value="">
+                                        <div class="input-block input-block--password">
+                                            <input id="confirm-new-password" name="confirm-new-password" type="password" data-validate-field="confirm-new-password" placeholder="Password confirmation" value="">
+                                            <button class="visible-pass-btn" type="button">
+                                                <svg class="visible-pass-btn__icon visible-pass-btn__icon--eye icon">
+                                                    <use xlink:href="img/sprite.svg#icon-eye"></use>
+                                                </svg>
+                                                <svg class="visible-pass-btn__icon visible-pass-btn__icon--eye-off icon">
+                                                    <use xlink:href="img/sprite.svg#icon-eye-off"></use>
+                                                </svg>
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
-                                <button class="form-submit-btn" type="submit">Change password</button>
+                                <button id="change-pass-btn" class="form-submit-btn" type="submit" disabled>Change password</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-
     </main>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="wrapper">
@@ -471,7 +482,6 @@
             </div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
