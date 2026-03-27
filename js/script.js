@@ -730,7 +730,7 @@ function init() {
     initCatalogMethods();
     initDetailProductMethods();
     initBasetMethods();
-    // initCompareMethods();
+    initCompareMethods();
     initPersonalMethods();
 }
 
