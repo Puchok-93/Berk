@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+</head>
+
+<body id="page-article">
+    <!-- Header -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-content">
+                <a class="header-logo" href="/">
+                    <img src="img/footer-logo.svg" alt="">
+                </a>
+                <div class="header-search">
+                    <form class="header-search-form" action="/search/">
+                        <input class="header-search-form__input" type="text" placeholder="Наушники Sony..." name="q"
+                            value="" id="top-search-line" autocomplete="off">
+                        <button class="header-search-form__btn" aria-label="Найти" type="submit">
+                            <svg class="header-search-form__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                    <button class="header-search__close-btn" type="button">
+                        <svg class="header-search__close-icon icon">
+                            <use xlink:href="img/sprite.svg#icon-cross"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header-contacts">
+                    <a class="header-contacts__contact"
+                        href="mailto:info@nordic-comfort.com">info@nordic-comfort.com</a>
+                    <a class="header-contacts__contact" href="tel:+10000000000">+1 000 000-00-00</a>
+                </div>
+                <div class="header-controls">
+                    <button class="search-btn" type="button">
+                        <svg class="header-search-form__icon icon">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                    </button>
+                    <div class="compare">
+                        <a class="compare__link" href="/personal/compare">
+                            <svg class="compare__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-compare"></use>
+                            </svg>
+                        </a>
+                        <div class="compare__value">2</div>
+                    </div>
+                    <div class="favorite">
+                        <a class="favorite__link" href="/personal/favorite">
+                            <svg class="favorite__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                            </svg>
+                        </a>
+                        <div class="favorite__value">2</div>
+                    </div>
+                    <div class="login">
+                        <a class="login__link" href="/personal/favorite">
+                            <svg class="login__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-login"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="cart">
+                        <a class="cart__link" href="/personal/cart">
+                            <svg class="cart__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-cart"></use>
+                            </svg>
+                        </a>
+                        <div class="cart__value">2</div>
+                    </div>
+                </div>
+                <button id="header-burger-btn" class="header-burger-btn burger-btn" type="button">
+                    <svg class="burger-btn__icon icon">
+                        <use xlink:href="img/sprite.svg#icon-burger"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="header-menu">
+                <div class="header-menu-heading">
+                    <a class="header-menu-heading__logo header-logo" href="/">
+                        <img src="img/footer-logo.svg" alt="">
+                    </a>
+                    <div class="header-controls">
+                        <button class="search-btn" type="button">
+                            <svg class="header-search-form__icon icon">
+                                <use xlink:href="img/sprite.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                        <div class="compare">
+                            <a class="compare__link" href="/personal/compare">
+                                <svg class="compare__icon icon">
+                                    <use xlink:href="img/sprite.svg#icon-compare"></use>
+                                </svg>
+                            </a>
+                            <div class="compare__value">2</div>
+                        </div>
+                        <div class="favorite">
+                            <a class="favorite__link" href="/personal/favorite">
+                                <svg class="favorite__icon icon">
+                                    <use xlink:href="img/sprite.svg#icon-favorite"></use>
+                                </svg>
+                            </a>
+                            <div class="favorite__value">2</div>
+                        </div>
+                        <div class="login">
+                            <a class="login__link" href="/personal/favorite">
+                                <svg class="login__icon icon">
+                                    <use xlink:href="img/sprite.svg#icon-login"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="cart">
+                            <a class="cart__link" href="/personal/cart">
+                                <svg class="cart__icon icon">
+                                    <use xlink:href="img/sprite.svg#icon-cart"></use>
+                                </svg>
+                            </a>
+                            <div class="cart__value">2</div>
+                        </div>
+                    </div>
+                    <button class="header-menu-heading__close-bnt" type="button">
+                        <svg class="header-menu-heading__close-icon icon">
+                            <use xlink:href="img/sprite.svg#icon-cross"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="header-menu-content">
+                    <div class="header-menu-navigation">
+                        <div class="header-catalog">
+                            <a class="header-catalog__link" href="#">Каталог</a>
+                            <div class="header-sub-catalog">
+                                <a class="header-sub-catalog__link" href="#">Кресла</a>
+                                <a class="header-sub-catalog__link" href="#">Тумбы</a>
+                            </div>
+                            </li>
+                        </div>
+                        <a class="header-menu-navigation__link" href="#">Производство</a>
+                        <a class="header-menu-navigation__link" href="#">Новости</a>
+                    </div>
+
+                    <div class="header-brands">
+                        <div class="header-brand">
+                            <a class="header-brand__link" href="#">
+                                <img src="img/brands/brand-berg.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="header-brand">
+                            <a class="header-brand__link" href="#">
+                                <img src="img/brands/brand-berg.webp" alt="">
+                            </a>
+                        </div>
+                        <div class="header-brand">
+                            <a class="header-brand__link" href="#">
+                                <img src="img/brands/brand-berg.webp" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-menu-slider">
+                        <div id="header-menu-main-slider" class="header-main-slider swiper">
+                            <div class="swiper-wrapper">
+                                <!-- 1 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 1</h4>
+                                </div>
+                                <!-- 2 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 2</h4>
+                                </div>
+                                <!-- 3 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 3</h4>
+                                </div>
+                                <!-- 4 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 4</h4>
+                                </div>
+                                <!-- 5 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 5</h4>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                        <div id="header-menu-thumb-slider" class="header-thumb-slider swiper">
+                            <div class="swiper-wrapper">
+                                <!-- 1 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 1</h4>
+                                </div>
+                                <!-- 2 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 2</h4>
+                                </div>
+                                <!-- 3 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 3</h4>
+                                </div>
+                                <!-- 4 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 4</h4>
+                                </div>
+                                <!-- 5 -->
+                                <div class="swiper-slide header-menu-slider-slide">
+                                    <div class="header-menu-slider-slide__img">
+                                        <img src="img/header-content/header-content-1.jpg" alt="">
+                                    </div>
+                                    <h4 class="header-menu-slider-slide__title">Название категории 5</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Содержимое страницы -->
+    <main>
+        <!-- Breadcrumbs -->
+        <section class="breadcrumbs">
+            <div class="wrapper">
+                <nav aria-label="Breadcrumb">
+                    <ol class="breadcrumbs-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <a class="breadcrumbs-list__link" itemprop="item" href="/">
+                                <span itemprop="name">Главная</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                        <li class="breadcrumbs-list__item" itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem">
+                            <span class="breadcrumbs-list__current-page" itemprop="name" aria-current="page">Privacy
+                                Policy</span>
+                            <meta itemprop="position" content="3" />
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Favorite Heading -->
+        <section class="article-heading">
+            <div class="wrapper">
+                <h1 class="article-heading__title">Terms and Conditions</h1>
+            </div>
+        </section>
+
+        <!-- Favorite Products -->
+        <section class="article-content">
+            <div class="wrapper">
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Introduction</p>
+                    <ol>
+                        <li>These Terms and Conditions (“Terms”) govern your use of [www.ncomfort.ae] (the “Website”),
+                            which is owned and operated by Nordic Comfort Furniture Trading LLC. (“Nordic Comfort”).
+                            These Terms apply to all users, whether accessing the Website via a computer, a mobile
+                            device, or any application provided by Nordic Comfort.</li>
+                        <li>These Terms outline the relationship between Nordic Comfort and you, specifying the
+                            conditions under which the Website is provided, the sale of products ("Products") through
+                            the Website, and the general terms related to your use of the Website and the purchase of
+                            Products. You may not use this Website or make any purchases on it if you do not accept
+                            these Terms.</li>
+                        <li>These Terms are effective as of 15 March 2026. Nordic Comfort reserves the right to update
+                            these Terms at any time by posting the revised version on the Website. Nordic Comfort
+                            recommends visiting the Website regularly to check for any changes and reviewing the Terms
+                            each time you purchase a Product. By continuing to use this Website, you explicitly agree to
+                            the updated Terms.</li>
+                        <li>These Terms do not affect your statutory rights, whether you are purchasing as a consumer or
+                            not.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Registration and Account Security</p>
+                    <ol>
+                        <li>In order to purchase products through the Website, you must register with Nordic Comfort.
+                            You are eligible to create an account or make purchases only if your membership has not been
+                            previously suspended or revoked by Nordic Comfort.</li>
+                        <li>You are responsible for keeping your account username and password confidential and for
+                            preventing unauthorized access to your account. You agree to take responsibility for all
+                            activities that occur under your account or password. It is important to keep your login
+                            details secure. If you believe your account information has been compromised or there is
+                            unauthorized use of your account, you must notify Nordic Comfort immediately.</li>
+                        <li>By submitting your details, you confirm that the information you provide to Nordic Comfort
+                            is accurate and complete. You agree to promptly notify Nordic Comfort of any changes to this
+                            information, such as a new email address or postal address. You can access and update your
+                            details in the "My Account" section of the Website.</li>
+                        <li>You will not be charged by Nordic Comfort for registering an account, browsing, or posting
+                            content. However, you will be responsible for paying the price of the products you purchase,
+                            including any applicable taxes, import/export duties, and delivery costs.</li>
+                        <li>Nordic Comfort reserves the right to deny access to the Website, terminate accounts, edit or
+                            remove content, or cancel orders at its discretion. If Nordic Comfort cancels an order,
+                            there will be no charge to you.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Product Information Disclaimer</p>
+                    <ol>
+                        <li>Nordic Comfort is not the manufacturer of the products and services available on the
+                            Website. While Nordic Comfort makes every effort to ensure the information on the Website is
+                            accurate, it does not guarantee that the descriptions are reliable, current, complete, or
+                            error-free. You should not rely solely on the information provided on the Website; instead,
+                            always refer to the product labels, warnings, and instructions that come with each product
+                            or service. If you notice any inaccuracies, please notify Nordic Comfort.</li>
+                        <li>Nordic Comfort has made efforts to accurately display the colors, specifications, and
+                            dimensions of products on the Website. However, the actual colors you see may vary depending
+                            on your monitor's display and resolution. Therefore, Nordic Comfort cannot guarantee that
+                            the color shown on your monitor will exactly match the true color of the product delivered.
+                            Additionally, Nordic Comfort reserves the right to modify the sizes, specifications, and
+                            quantities of products without prior notice.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Order Privacy and Payment Details</p>
+                    <ol>
+                        <li>When you place an order for products, Nordic Comfort collects certain personal and
+                            transactional information such as your name, address, and email address. For information on
+                            how Nordic Comfort utilizes this data, please refer to the privacy policy provided by Nordic
+                            Comfort.</li>
+                        <li>You can pay for the products you order online using your credit/debit card through a secure
+                            online order form, or you can opt to pay with cash upon delivery. Please note that Nordic
+                            Comfort does not accept checks, gift vouchers, or similar payment methods on the website.
+                        </li>
+                        <li>Upon placing your order, Nordic Comfort’s system will request authorization from your card
+                            provider for the transaction amount. If authorization is confirmed, your card issuer will
+                            reserve the funds awaiting payment to Nordic Comfort. However, providing your credit card
+                            details and the deduction of funds do not imply Nordic Comfort’s acceptance of your order.
+                        </li>
+                        <li>Certain products may be available for pre-order. To reserve these products, simply add them
+                            to your cart and proceed to checkout. The release date provided is the expected availability
+                            date of the product in our UAE stores and is subject to change based on our suppliers'
+                            information. Your card will be charged, and the product will be reserved once stock is
+                            received on or after the release date. You will receive an order confirmation by email
+                            immediately after completing your transaction, and a notification by email when your product
+                            is ready for collection.</li>
+                        <li>Nordic Comfort accepts orders based on product availability. If the products you ordered are
+                            not available, Nordic Comfort will contact you using the details provided at the time of
+                            order to either offer an alternative product of similar quality and price or cancel the
+                            order and refund you for the unavailable product.</li>
+                        <li>Products are invoiced in AED at the price prevailing at the time you place your order.
+                            Despite efforts to ensure accurate pricing, errors may occur. If an error is found in the
+                            price of the products you have ordered, Nordic Comfort will contact you to either confirm
+                            the order at the correct price or cancel it. If contact cannot be established, Nordic
+                            Comfort will treat the order as cancelled.</li>
+                        <li>You agree to pay the total amount due for your products as indicated during the order
+                            process, along with any applicable shipping fees or charges. If payment authorization is not
+                            granted, Nordic Comfort will cancel your order and seek an alternative payment method.</li>
+                        <li>It is your responsibility to monitor the status of your order. Please note, for security
+                            reasons, do not send payment details via email as Nordic Comfort cannot ensure the security
+                            of data sent by this method.</li>
+                        <li>Nordic Comfort will not be liable for losses caused by unauthorized access to your personal
+                            and transactional information unless this breach results from negligence or fraudulent
+                            behavior by Nordic Comfort.</li>
+                        <li>Nordic Comfort reserves the right to cancel any order, in whole or part, particularly if the
+                            order includes more than two units of the same item.</li>
+                        <li>If you are under 18, you must have permission from your parent or guardian to use this
+                            website and make purchases.</li>
+                        <li>Nordic Comfort reserves the right to limit promotional orders to a maximum of two units per
+                            order.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Cancellation and Returns Policy (Time
+                        FRAME)</p>
+                    <ol>
+                        <li>If you need to cancel your order, please contact Nordic Comfort’s customer service as soon
+                            as possible. Due to the speed at which we process orders, it may not always be possible to
+                            prevent the shipment of the order.</li>
+                        <li>If you believe a product is defective, it must be inspected by a Nordic Comfort -designated
+                            authorized service center to confirm its condition before a refund or exchange is processed.
+                        </li>
+                        <li>If you're unsatisfied with the quality of your purchase, please contact our customer support
+                            team, who will be happy to assist you with an exchange.</li>
+                        <li>If you receive the wrong product, please contact our customer service team immediately, and
+                            they will arrange for the correct item to be sent to you. Alternatively, if you prefer to
+                            return the incorrect item in person, email us at info@ncomfort.ae</li>
+                        <li>Once Nordic Comfort has dispatched your order, you cannot cancel any additional services
+                            requested, such as gift wrapping. However, upon receiving your cancellation request for a
+                            product, Nordic Comfort will refund the applicable portion of the purchase price.</li>
+                        <li>In cases where Nordic Comfort approves a refund, the sum will be returned to the same credit
+                            card used in the initial purchase. If the order was paid in cash upon delivery, a refund is
+                            possible only at the Nordic Comfort store.</li>
+                        <li>You may exchange an item purchased on the website or in-store within 15 working days from
+                            the date of receipt. The exchange must be done in person at Nordic Comfort stores in the
+                            UAE, and the product’s packaging must remain unopened.</li>
+                        <li>Nordic Comfort reserves the right to refuse a refund for any products that appear to have
+                            been used (including but not limited to tampered packaging or products not returned in their
+                            original packaging).</li>
+                        <li>All pre-orders and customized products whether made online or in-store, are not eligible for
+                            exchange or refund.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Delivery Terms</p>
+                    <ol>
+                        <li>If the ordered items are not delivered within the timeframe specified, please contact
+                            customer service, mentioning the order reference from your confirmation email.</li>
+                        <li>Delivery is completed once the ordered products are delivered to the specified delivery
+                            address provided when placing your order. You may be required to sign for the receipt of the
+                            goods to confirm their accuracy and satisfactory condition.</li>
+                        <li>If you are not available at the delivery address Nordic Comfort will contact you to arrange
+                            an alternative delivery time.</li>
+                        <li>Please note that delivery personnel will only deliver the products to your front door.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <o class="article-content__text article-content__text--bold">Orders and Delivery Outside the UAE</o>
+                    <ol>
+                        <li>Nordic Comfort exclusively delivers to addresses within the UAE.</li>
+                        <li>If you are using a foreign credit or debit card, please be aware that banks may impose fees
+                            for international transactions. Nordic Comfort is not responsible for any charges applied by
+                            banks. Additionally, the amount charged to your card will reflect the product's price in
+                            AED, which will be converted into your card’s currency at the prevailing exchange rate
+                            determined by the banks.</li>
+                        <li>Kindly note that the amount charged to your card will be in AED, converted to the currency
+                            of your bank operator at the prevailing conversion rate.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Terms of Website Use</p>
+                    <ol>
+                        <li>Nordic Comfort makes every effort to provide accurate information on this website, but there
+                            may be times when the information is not completely correct. It is your responsibility to
+                            confirm the accuracy of any details you use, and your use of this website is at your own
+                            risk. If you notice any discrepancies, please reach out to Nordic Comfort by phone or email.
+                        </li>
+                        <li>While using this website, you are prohibited from participating in or promoting any illegal
+                            activities. This includes actions that Nordic Comfort considers to be violations of
+                            copyright, infringement on privacy or other third-party rights, or engaging in defamation.
+                            Any breach of these terms may lead to legal consequence.</li>
+                        <li>You must not use this website to distribute unsolicited emails, spam, or promotional
+                            materials to other users. Additionally, you must refrain from causing any harm to this
+                            website or its users, including any technical damage to other computers.</li>
+                        <li>Sending viruses or other harmful materials intended to disrupt the operation of the Website
+                            or affect other users' equipment or data is strictly prohibited. Attempts to gain
+                            unauthorized access to the Website or interfere with its security measures are also
+                            prohibited.</li>
+                        <li>You must not use the website in a manner that could overload or impair its functionality,
+                            nor should you attempt to collect information about its users.</li>
+                        <li>Linking to the website or framing it on another website without prior written consent from
+                            Nordic Comfort is not allowed. You are also prohibited from charging third parties for
+                            access to the website's content or commercializing its content in any way.</li>
+                        <li>Modifying, editing, adding to, or creating summaries of the website's content elsewhere is
+                            not permitted.</li>
+                        <li>You must not disclose your contact details, including phone numbers, addresses, or email
+                            addresses, anywhere on the Website. This includes the feedback area, discussion forum, or
+                            any email feature intended to bypass the Website's use.</li>
+                        <li>Engaging in illegal activities, such as placing orders under a false name or using
+                            fraudulently obtained credit cards, is strictly prohibited. Parties involved in such
+                            activities may face legal consequences.</li>
+                        <li>Nordic Comfort cannot guarantee its ability to prevent or notify users of any illegal or
+                            inappropriate use of this Website</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">User Content and Behavior</p>
+                    <ol>
+                        <li>You agree to comply with all legal requirements of the jurisdiction in which you are located
+                            regarding your use of the website and acknowledge your full responsibility for staying
+                            informed about these requirements and following them.</li>
+                        <li>Individuals from the general public are allowed to submit comments, information, and other
+                            materials ("User Content") on the website. User Content that is deemed offensive, indecent,
+                            objectionable, or disparaging towards any individual or entity is prohibited. By submitting
+                            User Content, you acknowledge that you are solely responsible for the content you post, and
+                            you accept full responsibility for any User Content you submit on or through the website.
+                            Nordic Comfort disclaims any responsibility for User Content and reserves the right, but not
+                            the obligation, to refuse, modify, or remove any User Content at its discretion.</li>
+                        <li>While Nordic Comfort strives to remove offensive, indecent, or objectionable User Content,
+                            it may not be able to do so before you encounter such content. If you come across any User
+                            Content that you find offensive, indecent, or objectionable, please notify Nordic Comfort
+                            immediately.</li>
+                        <li>Nordic Comfort does not guarantee the accuracy, completeness, or quality of User Content.
+                            Additionally, Nordic Comfort is not responsible for any loss or damage resulting from your
+                            use of or reliance on User Content, which may not always be accurate. It is advised that you
+                            conduct your own research before relying on any User Content.</li>
+                        <li>By submitting User Content to the website, you grant Nordic Comfort a worldwide,
+                            royalty-free, non-exclusive license to use, exploit, and modify the User Content in any way
+                            and across all media, including its integration on the website.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Losses</p>
+                    <ol>
+                        <li>Nordic Comfort will not be held liable for any losses you incur due to a breach of these
+                            Terms, even if such losses were reasonably foreseeable by both parties when the contract for
+                            the sale of Products by Nordic Comfort to you was formed (i.e., when Nordic Comfort sends
+                            the confirmation email). Nordic Comfort is not liable for any business-related losses (such
+                            as loss of revenue, profits, contracts, expected savings, wasted expenditure, data, or
+                            goodwill) or any other loss or damage that does not directly result from Nordic Comfort’s
+                            actions or those of Nordic Comfort’s subcontractors or agents, is consequential in nature,
+                            or was not reasonably foreseeable by both parties at the time the contract was made.</li>
+                        <li>Without limiting the above, you acknowledge and agree that, to the extent permitted by law,
+                            neither Nordic Comfort, its suppliers, nor any of Nordic Comfort’s employees, agents, or
+                            contractors shall be held liable for any misadventure, accident, injury, loss, or claim,
+                            whether direct or indirect, suffered by any individual:
+                            <ul class="list-style__lower-alpha">
+                                <li>Due to any material, including statements made by any other user of the Website
+                                    or
+                                    any other person;</li>
+                                <li>In relation to the failure of any material (including any order for a product) to
+                                    be
+                                    received on the Website due to technical problems or traffic congestion;</li>
+                                <li>rising from or related to any problem or technical malfunction of any network,
+                                    lines,
+                                    or mobile communications network related to or resulting from participation in this
+                                    Website;</li>
+                                <li>Arising from or related to any problem or technical malfunction of any computer
+                                    equipment, software, internet connection, any injury or damage to entrant's or any
+                                    other
+                                    person's computer software related to or resulting from participation in this
+                                    Website;
+                                </li>
+                                <li>As a result of the communication of the Website to the public, the exploitation
+                                    of
+                                    the Website, or any promotional activities relating to the Website.</li>
+                            </ul>
+                        </li>
+                        <li>Nordic Comfort will not be liable for any losses you suffer as a direct result of Nordic
+                            Comfort’s breach of these Terms, even if such losses were reasonably foreseeable by both
+                            parties at the time the contract for the sale of Products by Nordic Comfort to you was
+                            established (i.e., when Nordic Comfort sends the confirmation email). Nordic Comfort is not
+                            responsible for any business-related losses (such as loss of revenue, profits, contracts,
+                            expected savings, wasted expenditure, data, or goodwill), or any other loss or damage that
+                            does not directly result from Nordic Comfort’s actions or those of Nordic Comfort’s
+                            subcontractors or agents, is consequential in nature, or was not reasonably foreseeable by
+                            both parties when the contract was made.
+                        </li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Security</p>
+                    <ol>
+                        <li>If you find the website or any of its content or materials unsatisfactory, your only option
+                            is to discontinue using it. Moreover, you acknowledge that any unauthorized use of the
+                            website and its services resulting from your negligent actions or omissions would cause
+                            irreparable harm to Nordic Comfort.</li>
+                        <li>Nordic Comfort takes reasonable precautions to ensure the website's security but does not
+                            guarantee that it is free from viruses or other harmful elements. You are responsible for
+                            installing appropriate virus protection software on your device. Nordic Comfort is not
+                            liable for any loss or damage caused by viruses or other harmful materials resulting from
+                            your use of the website or Nordic Comfort’s services.</li>
+                        <li>While Nordic Comfort strives to ensure the continuous availability of the website, it does
+                            not guarantee that the website will always be accessible or operate without interruption.
+                            Due to the inherent nature of the internet, mobile connectivity, and the functioning of
+                            mobile applications, outages may occur. Nordic Comfort reserves the right to limit or
+                            suspend access to the website for maintenance, repairs, or the introduction of new features
+                            or services.</li>
+                        <li>Nordic Comfort does not endorse any third-party service or User Content on this website and
+                            is not liable for any content posted on the website by third parties or for the conduct of
+                            any third party. Although Nordic Comfort endeavors to enforce the terms regarding content,
+                            you may encounter content or conduct that violates Nordic Comfort’s policies as described in
+                            these terms or may otherwise be offensive. Your use of this website entails risk regarding
+                            such content.</li>
+                        <li>It is your responsibility to have appropriate browser or third-party software to view and
+                            transact on this website. Nordic Comfort does not accept any responsibility for any loss of
+                            functionality dependent on the technology you use.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Third-Party Site Links</p>
+                    <ol>
+                        <li>This website may include hyperlinks to other websites. Nordic Comfort does not make any
+                            assurances or guarantees regarding the content, privacy policies, or other practices of any
+                            websites operated by third parties, and Nordic Comfort does not assume any liability for the
+                            content or practices of such websites. It is advisable to review the terms of service and
+                            privacy policies of all third-party websites you visit to comprehend their practices.</li>
+                        <li>Should you choose to access any linked website or utilize any material found therein, you do
+                            so at your own risk, and it is your responsibility to employ all necessary precautions
+                            against viruses or other harmful elements. Nordic Comfort neither endorses nor assumes
+                            responsibility for the usage or content of any third-party websites. Nordic Comfort shall
+                            not be held liable for any consequences arising from your use of such websites.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Suspending & Terminating Your Account
+                    </p>
+                    <ol>
+                        <li>Nordic Comfort reserves the right to suspend or terminate your account and access to this
+                            website if
+                            <ul class="list-style__lower-alpha">
+                                <li>You violate these terms or any of Nordic Comfort’s policies;</li>
+                                <li>Nordic Comfort reasonably suspects that you may breach these terms;</li>
+                                <li>You engage in any activity that constitutes a criminal offense;</li>
+                                <li>Your actions have a detrimental impact on Nordic Comfort’s business or
+                                    reputation;</li>
+                                <li>Nordic Comfort believes you are disrupting, disturbing, or interrupting the
+                                    operation of this website;</li>
+                                <li>Nordic Comfort suspects fraudulent activity, the use of multiple accounts, or the
+                                    use of proxy internet protocol addresses to conceal the use of multiple accounts;
+                                </li>
+                                <li>Nordic Comfort deems it necessary, for any reason, to safeguard Nordic Comfort or
+                                    the website's users.</li>
+                            </ul>
+                        </li>
+                        <li>You have the option to deregister your account and discontinue using this website at any
+                            time. Nordic Comfort will maintain your account and all associated content in an inactive
+                            state, though it may not necessarily be deleted. If Nordic Comfort chooses, at its
+                            discretion, to permanently delete all of your content following your deregistration or for
+                            any other reason (such as prolonged inactivity), it cannot be recovered or accessed
+                            thereafter, and Nordic Comfort bears no liability or responsibility for this.</li>
+                        <li>In addition to any other rights and remedies available under these terms or applicable law,
+                            Nordic Comfort may take further technical and/or legal measures against any user causing
+                            problems or potential legal liabilities, breaching these terms, Nordic Comfort’s policies,
+                            or any relevant laws.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Force Majeure</p>
+                    <ol>
+                        <li>Neither party shall be held liable to the other party under these terms or any other
+                            agreement for any loss or damage that may be suffered due to any cause beyond the reasonable
+                            control of the first party. Such causes include, but are not limited to, acts of God,
+                            extremely severe weather, power supply failures or shortages, floods, droughts, lightning,
+                            fires, strikes, lock-outs, trade disputes, or labor disturbances (excluding those directly
+                            involving the parties), government actions or omissions, highway authority decisions,
+                            telecommunications operator actions, war, military operations, terrorism, or insurrection,
+                            as well as royal events.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Representations and Warranties</p>
+                    <ol>
+                        <li>
+                            By using this website, you agree to the following:
+                            <ul class="list-style__lower-alpha">
+                                <li>If you are a corporate representative, you have the authority to legally bind the
+                                    corporate entity.</li>
+                                <li>You will adhere to all relevant domestic and international laws and regulations
+                                    while using the website and placing orders for products.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Electronic Communication</p>
+                    <ol>
+                        <li>To fulfill Nordic Comfort’s obligations to you under these terms, Nordic Comfort may, if
+                            necessary, communicate with you via email and by posting notices on the website. You agree
+                            to receive communications from Nordic Comfort electronically, and electronic communications
+                            will satisfy any legal requirement for communications that need to be in writing.</li>
+                        <li>Nordic Comfort may also send you promotional emails. If at any time you decide that you do
+                            not wish to receive such promotional emails, you may opt out of receiving them by updating
+                            the relevant setting in your account, by calling or emailing Nordic Comfort’s contact
+                            center, or by following the link (if any) at the end of any promotional email to
+                            unsubscribe.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Intellectual Property Rights</p>
+                    <ol>
+                        <li>The content on this website is protected by copyright, trademark, and other intellectual
+                            property rights. Nordic Comfort and Nordic Comfort’s licensors (as appropriate) retain all
+                            rights to such content. Your authorization is limited to accessing and using this website
+                            for personal purposes. You may not utilize the website or any of its content for commercial
+                            purposes, including any revenue-generating activities such as advertising or marketing on
+                            your own website. Additionally, you may not modify, copy, distribute, transmit, display,
+                            perform, reproduce, publish, license, commercially exploit, create derivative works from,
+                            transfer, or sell any content or software found on the website.</li>
+                        <li>The trademarks ncomfort, NC and Nordic Comfort as well as the associated logos, are owned by
+                            Nordic Comfort.</li>
+                        <li>Please note that Nordic Comfort is not responsible for any errors or inaccuracies in any
+                            advertising or sponsorship material on the website.</li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Relationship and Notice</p>
+                    <ol>
+                        <li>None of the provisions of these terms shall imply a partnership or agency between you and
+                            Nordic Comfort, and you are not authorized to bind Nordic Comfort in any manner whatsoever.
+                        </li>
+                        <li>Unless explicitly stated otherwise, any notices to Nordic Comfort from you may be sent via
+                            email to info@ncomfort.ae, with a physical copy also sent to Nordic Comfort by mail or
+                            courier. Such notices shall be deemed received by Nordic Comfort upon confirmation of
+                            receipt through return email. Any notices to you from Nordic Comfort will be provided
+                            through notices posted on the website or via email to the email address you provided during
+                            the registration process. You will be deemed to have received such notices 48 hours after
+                            the email is sent. Alternatively, Nordic Comfort may provide notice by mail or prepaid
+                            delivery to the address provided during registration, with notice being deemed given 7 days
+                            after the date of emailing.</li>
+                        <li>If any clause of these terms is found to be invalid, void, or unenforceable for any reason,
+                            such clause shall be deemed severable and shall not affect the validity and enforceability
+                            of the remaining clauses.</li>
+                        <li>These terms (as amended from time to time in accordance with their provisions) constitute
+                            the entire understanding and agreement between you and Nordic Comfort regarding the use of
+                            the website.</li>
+                        <li>Failure by Nordic Comfort to enforce any terms set forth in these terms or other policies
+                            with you shall not constitute a waiver of Nordic Comfort’s rights to enforce such terms.
+                        </li>
+                    </ol>
+                </div>
+                <div class="article-content-block-list">
+                    <p class="article-content__text article-content__text--bold">Governing Law and Jurisdiction</p>
+                    <ol>
+                        <li>These terms are governed by and interpreted in accordance with the laws of the United Arab
+                            Emirates (UAE). By using this website, you agree to submit to the non-exclusive jurisdiction
+                            of the courts in the UAE.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <a class="footer-logo" href="/">
+                    <img src="img/footer-logo.svg" alt="">
+                </a>
+                <!-- Navigation -->
+                <div class="footer-navigation">
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Каталог</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Категория</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">О компании</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Бренды</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Отзывы</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Производство</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Новости</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Реквизиты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-navigation-column">
+                        <ul class="footer-navigation-list">
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Контакты</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">+7 (000) 000-00-00</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">example@gmail.com</a>
+                            </li>
+                            <li class="footer-navigation-list__item">
+                                <a class="footer-navigation-list__link" href="#">Address</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Social -->
+                <div class="footer-social">
+                    <ul class="footer-social-list">
+                        <li class="footer-social-list__item">
+                            <a class="footer-social-list__link" href="#" target="_blank">
+                                <img class="footer-social-list__icon" src="" alt="">
+                            </a>
+                        </li>
+                        <li class="footer-social-list__item">
+                            <a class="footer-social-list__link" href="#" target="_blank">
+                                <img class="footer-social-list__icon" src="" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Subscribe -->
+                <div class="footer-subscribe">
+                    <h2 class="footer-subscribe__title">Follow our news</h2>
+                    <form class="footer-form-subscribe" action="post">
+                        <input class="footer-form-subscribe__input" type="text" placeholder="e-mail">
+                        <button class="footer-form-subscribe__btn" type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom-content">
+                <ul class="footer-bottom-content-list">
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Политика конфиденциальности</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Согласие на обработку персональных
+                            данных</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Копирайт</a>
+                    </li>
+                    <li class="footer-bottom-content-list__item">
+                        <a class="footer-bottom-content-list__link" href="">Разработка веб-дизайна</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
