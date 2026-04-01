@@ -562,7 +562,6 @@ function initBasetMethods() {
 }
 
 function initCompareMethods() {
-
     const compare = document.getElementById('page-compare');
 
     function initCompareProductsScroll() {
@@ -609,10 +608,38 @@ function initCompareMethods() {
         });
     }
 
+    function initMobCompareSlider() {
+        const comparedSlider = new Swiper('#compared-products-1', {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+        })
+
+        const comparedSlider2 = new Swiper('#compared-products-2', {
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                hide: false,
+            },
+        })
+    }
+
     if(!compare) return;
 
-    initCompareProductsScroll();
-    initDifferencesChars();
+    if(window.innerWidth < 768) {
+        initMobCompareSlider();
+    } else {
+        initCompareProductsScroll();
+        initDifferencesChars();
+    }
 }
 
 function initPersonalMethods() {
