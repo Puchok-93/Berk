@@ -569,8 +569,18 @@ function initCompareMethods() {
         const container = document.querySelector('.compare-products-inner-wrapper');
         const btnLeft = document.querySelector('.compare-scroll-btn--left');
         const btnRight = document.querySelector('.compare-scroll-btn--right');
+
+        if (!container || !btnLeft || !btnRight) return;
+
         const item = container.querySelector('.compare-property__value');
         const scrollStep = item.offsetWidth + GAP;
+
+        function checkScroll() {
+            const hasScroll = container.scrollWidth > container.clientWidth;
+
+            btnLeft.style.display = hasScroll ? 'block' : 'none';
+            btnRight.style.display = hasScroll ? 'block' : 'none';
+        }
 
         btnLeft.addEventListener('click', () => {
             container.scrollBy({
@@ -585,6 +595,9 @@ function initCompareMethods() {
                 behavior: 'smooth'
             });
         });
+
+        checkScroll();
+        window.addEventListener('resize', checkScroll);
     }
 
     function initDifferencesChars() {
@@ -609,26 +622,74 @@ function initCompareMethods() {
     }
 
     function initMobCompareSlider() {
-        const comparedSlider = new Swiper('#compared-products-1', {
-            pagination: {
-                el: ".swiper-pagination",
-                type: "fraction",
-            },
-            scrollbar: {
-                el: ".swiper-scrollbar",
-                hide: false,
-            },
-        })
+        let sliders = [];
+        const isMobile = window.innerWidth <= 767;
 
-        const comparedSlider2 = new Swiper('#compared-products-2', {
+        const sliderSelectors = [
+            '#compared-products-1',
+            '#compared-products-2'
+        ];
+
+        if(!isMobile) {
+            sliders.forEach(slider => {
+                if (slider && slider.destroy) {
+                    slider.destroy(true, true);
+                }
+            });
+            sliders = [];
+            return;
+        }
+
+        if (sliders.length) return;
+
+        sliders = sliderSelectors.map(selector => {
+            return new Swiper(selector, {
             pagination: {
-                el: ".swiper-pagination",
+                el: `${selector} .swiper-pagination`,
                 type: "fraction",
             },
             scrollbar: {
-                el: ".swiper-scrollbar",
+                el: `${selector} .swiper-scrollbar`,
                 hide: false,
             },
+            });
+        });
+    }
+
+    function initMobDifferencesChars() {
+        const btn = document.getElementById('differences-chars-btn');
+        let showDifferencesOnly = false;
+
+        btn.addEventListener('click', () => {
+            showDifferencesOnly = !showDifferencesOnly;
+
+            const charLabels = document.querySelectorAll('.compared-products-char-labels .char');
+            const charValuesGroup = document.querySelectorAll('.compared-products-char-values');
+
+            charLabels.forEach((row, index) => {
+                let values = [];
+                
+                charValuesGroup.forEach(group => {
+                    const value = group.children[index].innerHTML.trim();
+                    values.push(value);
+                })
+
+                const allEqual = values.every(v => v === values[0]);
+
+                if(showDifferencesOnly && allEqual) {
+                    row.style.display = 'none';
+                    charValuesGroup.forEach(group => {
+                        group.children[index].style.display = 'none';
+                    })
+                    btn.classList.add('js-active');
+                } else {
+                    row.style.display = '';
+                    charValuesGroup.forEach(group => {
+                        group.children[index].style.display = '';
+                    })
+                    btn.classList.remove('js-active');
+                }
+            })
         })
     }
 
@@ -636,6 +697,7 @@ function initCompareMethods() {
 
     if(window.innerWidth < 768) {
         initMobCompareSlider();
+        initMobDifferencesChars();
     } else {
         initCompareProductsScroll();
         initDifferencesChars();

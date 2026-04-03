@@ -107,4 +107,9 @@
     <symbol id="calendar" viewbox="0 0 18 18">
         <path d="m15.9 1.4h-.9v-1.4h-1.4v1.4h-9.2v-1.4h-1.4v1.4h-.9c-1.2 0-2.1 1-2.1 2.1v12.4c0 1.2.9 2.1 2.1 2.1h13.8c1.2 0 2.1-.9 2.1-2.1v-12.4c0-1.1-.9-2.1-2.1-2.1m.7 14.5c0 .4-.3.7-.7.7h-13.8c-.4 0-.7-.3-.7-.7v-9.3h15.2v9.3m0-10.7h-15.2v-1.7c0-.4.3-.7.7-.7h.9v1.4h1.4v-1.4h9.3v1.4h1.3v-1.4h.8c.4 0 .7.3.7.7v1.7zm-13.9 2.9h1.4v1.4h-1.4v-1.4m2.8 0h1.4v1.4h-1.4v-1.4m2.8 0h1.4v1.4h-1.4v-1.4m2.8 0h1.4v1.4h-1.4v-1.4m2.8 0h1.4v1.4h-1.4v-1.4m-11.2 2.8h1.4v1.4h-1.4v-1.4m2.8 0h1.4v1.4h-1.4v-1.4m2.8 0h1.4v1.4h-1.4v-1.4m2.8 0h1.4v1.4h-1.4v-1.4m-8.4 2.8h1.4v1.4h-1.4v-1.4m2.8 0h1.4v1.4h-1.4v-1.4m2.8 0h1.4v1.4h-1.4v-1.4m2.8 0h1.4v1.4h-1.4v-1.4m2.8-2.8h1.4v1.4h-1.4v-1.4"></path>
     </symbol>
+    <symbol id="icon-logout" viewBox="0 0 24 24">
+        <path d="M9 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16 17L21 12L16 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M21 12H9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
 </svg>
