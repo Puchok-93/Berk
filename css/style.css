@@ -3839,7 +3839,64 @@ input[type="range"]::-webkit-slider-thumb:active {
 /* #endregion */
 
 /* #region ================================= 21. ARTICLE PAGES  ================================= */
+.article-heading {
+    padding: 26px 0;
+}
 
+.article-heading__title {
+    font: 500 4.375rem / 1.1 var(--font-cormorant);
+    text-transform: uppercase;
+    color: var(--base-color-dark);
+}
+
+.article-content {
+    padding: 0 0 110px;
+}
+
+.article-content__text {
+    font: 400 1.25rem / 1.4 var(--font-roboto);
+    margin: 0 0 20px;
+}
+
+.article-content__text--bold {
+    font: 600 2rem / 1.4 var(--font-cormorant);
+    border-bottom: 1px solid var(--base-color-dark);
+}
+
+.article-content-block-list {
+    margin: 0 0 40px;
+}
+
+.article-content-block-list ul,
+.article-content-block-list ol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font: 400 1.25rem / 1.4 var(--font-roboto);
+}
+
+.article-content-block-list ul li,
+.article-content-block-list ol li {
+    position: relative;
+    padding: 0 0 0 30px;
+}
+
+.article-content-block-list ul li::before,
+.article-content-block-list ol li::before {
+    position: absolute;
+    content: '';
+    top: 10px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--base-color-dark);
+}
+
+.article-content__text a {
+    color: #858176;
+    border-bottom: 2px solid #858176;
+}
 /* #endregion */
 .page-banner {
     padding: 60px 0;
@@ -5583,5 +5640,44 @@ input[type="range"]::-webkit-slider-thumb:active {
         padding: 0;
         margin: auto 0 0;
     }
+    /* #endregion */
+
+    /* #region ================================= 767 ARTICLE PAGES  ================================= */
+    .article-heading {
+        padding: 26px 0;
+    }
+
+    .article-heading__title {
+            font: 500 2.50rem / 1.1 var(--font-cormorant);
+    }
+
+    .article-content__text {
+        font: 400 1rem / 1.4 var(--font-roboto);
+        margin: 0 0 20px;
+    }
+
+    .article-content__text--bold {
+        font: 600 1.5rem / 1.2 var(--font-cormorant);
+        padding: 0 0 10px;
+    }
+
+    .article-content-block-list {
+        margin: 0 0 40px;
+    }
+
+    .article-content-block-list ul,
+    .article-content-block-list ol {
+        font: 400 1rem / 1.4 var(--font-roboto);
+    }
+
+    .article-content-block-list ul li,
+    .article-content-block-list ol li {
+        padding: 0 0 0 30px;
+    }
+
+    .article-content__text a {
+        border-bottom: 1px solid #858176;
+    }
+
     /* #endregion */
 }
