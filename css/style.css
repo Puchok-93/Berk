@@ -141,6 +141,7 @@ html, body {
 
 main {
     flex: 1;
+    padding: 52px 0 0;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -234,6 +235,12 @@ figure {
     max-width: auto;
     padding: 0 120px;
     margin: 0 auto;
+}
+
+.row,
+.col {
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .icon {
@@ -373,7 +380,7 @@ figure {
 .header {
     position: relative;
     z-index: 10;
-    padding: 52px 0;
+    padding: 52px 0 0;
 }
 
 .header-content {
@@ -420,7 +427,7 @@ figure {
 .header-search-form__btn {
     position: absolute;
     right: 15px;
-    top: 8px;
+    top: 6px;
 }
 
 .header-search-form__icon {
@@ -605,6 +612,7 @@ figure {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 12;
     width: 100%;
     padding: 52px 120px;
 }
@@ -1094,8 +1102,9 @@ figure {
 
 /* #region ======== 7.1 About Company ======== */
 .about-company-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    display: flex;
     gap: 50px;
     padding: 60px 0 0;
 }
@@ -2425,6 +2434,15 @@ input[type="range"]::-webkit-slider-thumb:active {
     height: 50px;
 }
 
+.detailed-product-select-variation__item.option-text {
+    width: max-content;
+    height: auto;
+    padding: 5px 10px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 2px solid  var(--base-color-light-beige);
+}
+
 .detailed-product-select-variation__item.color {
     border-radius: 50%;
 }
@@ -2447,6 +2465,10 @@ input[type="range"]::-webkit-slider-thumb:active {
     position: relative;
     width: 42px;
     height: 42px;
+}
+
+.detailed-product-select-variation__item.option-text.js-active {
+    background-color:  var(--base-color-light-beige);
 }
 
 .detailed-product-select-variation__item.color.js-active::before {
@@ -2563,6 +2585,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 .detailed-product-description p {
     font: 400 1.25rem / 1.4 var(--font-roboto);
     padding: 0 10px;
+    margin: 0 0 20px;
 }
 
 .characteristics-list {
@@ -2610,6 +2633,10 @@ input[type="range"]::-webkit-slider-thumb:active {
     ================================ */
 
 /* #region ======== 15.1 basket Heading  ======== */ 
+.basket {
+    padding: 0 0 120px;
+}
+
 .basket--not-empty {
     padding: 0 0 120px;
     margin: -12px 0 0 0;
@@ -3906,11 +3933,13 @@ input[type="range"]::-webkit-slider-thumb:active {
     /* #region ================================= 1920px ABOUT COMPANY ================================= */
     .about-company-content-left-column {
         max-width: 688px;
+        flex: 1;
     }
 
     .about-company-content-right-coulmn {
-        max-width: 550px;
-        margin: 0 178px 0 auto;
+        /* max-width: 550px; */
+        flex: 1;
+        /* margin: 0 178px 0 auto; */
     }
     /* #endregion */
 
@@ -3947,7 +3976,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     /* #region ================================= 1440px HEADER ================================= */
     
     .header-menu {
-        padding: 30px 60px;
+        padding: 52px 60px;
     }
     /* #endregion */
 
@@ -4165,7 +4194,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
 
     .header-menu {
-        padding: 30px;
+        padding: 52px 30px;
     }
 
     .header-brand {
@@ -4224,6 +4253,10 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 @media(max-width: 1024px) {
+    main {
+        padding: 45px 0 0;
+    }
+
     .wrapper {
         padding: 0 20px;
     }
@@ -4243,7 +4276,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     /* #region ================================= 1024px HEADER ================================= */
     .header {
-        padding: 45px 0;
+        padding: 45px 0 0;
     }
 
     .header-logo {
@@ -4269,7 +4302,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
 
     .header-menu {
-        padding: 20px;
+        padding: 45px 20px;
     }
 
     .header-menu-content {
@@ -4349,7 +4382,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     /* #region ================================= 1024px ABOUT COMPANY ================================= */
     .about-company-content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 50px;
         padding: 50px 0 0;
     }
@@ -4474,6 +4507,10 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 @media(max-width: 767px) {
+    main {
+        padding: 32px 0 0;
+    }
+
     .wrapper {
         padding: 0 16px;
     }
@@ -4505,7 +4542,11 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     /* #region ================================= 767px HEADER ================================= */
     .header {
-        padding: 32px 0;
+        padding: 32px 0 0;
+    }
+
+    .header-content {
+        height: 39px;
     }
 
     .header-contacts {
@@ -4584,7 +4625,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     .header-menu {
         gap: 33px;
-        padding: 43px 16px;
+        padding: 32px 16px;
     }
 
     .header-menu-heading__close-bnt,
@@ -4876,6 +4917,10 @@ input[type="range"]::-webkit-slider-thumb:active {
         margin: 0 -16px;
     }
 
+    .catalog-section-list-tile-list {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
     .selections {
         overflow-y: scroll;
         flex-wrap: nowrap;
@@ -4947,7 +4992,8 @@ input[type="range"]::-webkit-slider-thumb:active {
         min-width: 200px;
         width: max-content;
         box-sizing: border-box;
-        left: -182px;
+        left: auto;
+        right: 0;
     }
     /* #endregion */
 
