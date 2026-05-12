@@ -1,6 +1,7 @@
 /* ================================
     GLOBAL
     SWIPER CONTROLS
+    DECOR SECTION
 
     CONTENTS
     1. HEADER
@@ -259,7 +260,6 @@ figure {
 }
 
 .section-text {
-    /* font: 400 20px/140% var(--font-roboto); */
     font: 400 1.25rem/140% var(--font-roboto);
     color: var(--base-color-dark);
     margin: 0;
@@ -315,6 +315,13 @@ figure {
 
 .mob-logout {
     display: none;
+}
+
+
+.decor-section {
+    position: relative;
+    z-index: -1;
+    margin: -32px 0 0 0;
 }
 
 /* #region ================================= GLOBAL ================================= */
@@ -1035,7 +1042,7 @@ figure {
     padding: 0 0 50px;
 }
 
-.main-page::before {
+/* .main-page::before {
     position: absolute;
     content: '';
     width: 100%;
@@ -1046,7 +1053,7 @@ figure {
     transform: translateX(-50%);
     z-index: -1;
     background: url(../img/decor/decor.png) 0 0 / contain no-repeat;
-}
+} */
 
 .main-screen {
     position: relative;
@@ -1103,11 +1110,14 @@ figure {
 
 /* #region ======== 7.1 About Company ======== */
 .about-company-content {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr; */
-    display: flex;
+    display: grid;
+    grid-template-columns: 35% 63%;
     gap: 50px;
     padding: 60px 0 0;
+}
+
+.about-company-content-left-column {
+    flex-shrink: 0;
 }
 
 .about-company-content-right-coulmn {
@@ -1118,6 +1128,10 @@ figure {
     gap: 80px;
     padding: 42px 0 0 0;
     margin: 0 0 0 auto;
+}
+
+.about-company-image {
+    margin: 0 -25px 0 0;
 }
 
 .about-company-image img {
@@ -1138,7 +1152,7 @@ figure {
 /* #region ======== 8.1 Popular Products ======== */
 .popular-products-section {
     padding: 60px 0;
-    margin: 356px 0 0 0;
+    margin: -80px 0 0 0;
 }
 
 .popular-products-content {
@@ -4063,14 +4077,28 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 @media(max-width: 1920px) {
     /* #region ================================= 1920px ABOUT COMPANY ================================= */
+    .about-company-content {
+        display: flex;
+        gap: 50px;
+        padding: 60px 0 0;
+    }
+    
     .about-company-content-left-column {
         max-width: 688px;
         flex: 1;
     }
 
+    .about-company-content-left-column .about-company-image {
+        max-width: 688px;
+        max-height: 554px;
+        overflow: hidden;
+    }
+
     .about-company-content-right-coulmn {
-        /* max-width: 550px; */
+        gap: 52px;
+        max-width: 550px;
         flex: 1;
+        margin: 0 auto; 
         /* margin: 0 178px 0 auto; */
     }
     /* #endregion */
@@ -4429,6 +4457,14 @@ input[type="range"]::-webkit-slider-thumb:active {
         padding: 0 20px;
     }
 
+    .section-text {
+        margin: 0;
+    }
+
+    .decor-section {
+        margin: 50px 0;
+    }
+
     /* #region ================================= 1024px SWIPER CONTROLS ================================= */
     #news-slider .swiper-scrollbar,
     #reviews-slider .swiper-scrollbar {
@@ -4565,7 +4601,8 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     /* #region ================================= 1024px POPULAR PRODUCTS ================================= */
     .popular-products-section {
-        margin: 86px 0 0 0;
+        padding: 0 0 60px;
+        margin: 0;
     }
 
     .popular-products-catalog-link {
@@ -4693,6 +4730,10 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     .star-rating {
         margin: 9px 0 0 0;
+    }
+
+    .decor-section {
+        display: none;
     }
 
     /* #region ================================= 767px SWIPER CONTROLS ================================= */
@@ -4950,6 +4991,10 @@ input[type="range"]::-webkit-slider-thumb:active {
         gap: 32px;
     }
 
+    .about-company-image {
+        margin: 0;
+    }
+
     .about-company-image img {
         width: 100%;
         aspect-ratio: 343 / 276;
@@ -4964,7 +5009,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     /* #region ================================= 767px POPULAR PRODUCTS ================================= */
     .popular-products-section {
-        padding: 45px 0 90px;
+        padding: 41px 0 90px;
         margin: 0;
     }
 
