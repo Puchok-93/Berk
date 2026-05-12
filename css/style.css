@@ -24,6 +24,7 @@
     19. COMPARE PAGE
     20. PERSONAL PAGE
     21. ARTICLE PAGES
+    22. BRAND PAGE
 
 ================================ */
 
@@ -3925,6 +3926,137 @@ input[type="range"]::-webkit-slider-thumb:active {
     border-bottom: 2px solid #858176;
 }
 /* #endregion */
+
+
+/* #region ================================= 22. BRAND PAGE  ================================= */
+
+.brand-heading {
+    padding: 36px 0 44px;
+}
+
+.brand-heading__title  {
+    font: 500 4.375rem / 1.1 var(--font-cormorant);
+    text-transform: uppercase;
+    color: var(--base-color-dark);
+}
+
+.brand-detailed-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.brand-detailed-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-detailed-info p {
+    font: 400 1.25rem / 1.4 var(--font-roboto);
+    color: var(--base-color-dark);
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+    margin: 0 0 42px;
+}
+
+.brand-detailed-info__img {
+    margin: 18px 0 58px;
+}
+
+.brand-detailed-info__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-detailed-logo {
+    width: max-content;
+}
+
+.brand-detailed-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(405px, 1fr));
+    gap: 20px;
+    margin: 16px 0 0 0;
+}
+
+.brand-detailed-gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-detailed-key-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    margin: 50px 0;
+}
+
+.brand-detailed-key-feature__subtitle {
+    font: 500 1.25rem / 1.4 var(--font-roboto);
+    color: var(--base-color-dark);
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+    margin: 0;
+}
+
+.brand-key-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 0 0 20px;
+}
+
+.brand-key-features-list__item {
+    position: relative;
+    font: 400 1.25rem / 1.4 var(--font-roboto);
+    color: var(--base-color-dark);
+    margin: 0;
+}
+
+.brand-key-features-list__item::before {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    top: 11px;
+    left: -17px;
+    border-radius: 50%;
+    background-color: var(--base-color-dark);
+}
+
+.brand-products {
+    padding: 120px 0;
+}
+
+
+.brand-products__title {
+    font: 500 4.375rem / 1.1 var(--font-cormorant);
+    text-transform: uppercase;
+    color: var(--base-color-dark);
+}
+
+.brand-products__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 400 1.25rem / 1.4 var(--font-roboto);
+    background-color: var(--base-color-light-beige);
+    color: var(--base-color-dark);
+    width: 100%;
+    max-width: 830px;
+    padding: 17px 0;
+    margin: 0 auto;
+}
+
+
+.brand-products .catalog-list {
+    grid-template-columns: repeat(auto-fit, minmax(208px, 1fr));
+}
+
+/* #endregion */
+
 .page-banner {
     padding: 60px 0;
 }
@@ -3953,6 +4085,42 @@ input[type="range"]::-webkit-slider-thumb:active {
     .catalog-list {
         grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
     }
+    /* #endregion */
+
+
+    /* #region ================================= 1920px BRAND PAGE ================================= */
+
+    .brand-detailed-content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .brand-detailed-content .left-column {
+        width: 100%;
+        max-width: 790px;
+    }
+
+    .brand-detailed-info__img {
+        height: 382px;
+    }
+
+    .brand-detailed-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+    }
+
+    .brand-detailed-gallery__item {
+        max-width: 405px;
+    }
+
+    .brand-detailed-content .right-column {
+        width: 100%;
+        max-width: 830px;
+    }
+
+    .brand-key-features-list {
+        max-width: 640px;
+    }
+
     /* #endregion */
 }
 
