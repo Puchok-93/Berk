@@ -26,6 +26,7 @@
     20. PERSONAL PAGE
     21. ARTICLE PAGES
     22. BRAND PAGE
+    23. SHOWROOM PAGE
 
 ================================ */
 
@@ -2167,7 +2168,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     background: url(../img/icon-dark-cross.svg) center / 10px 10px no-repeat;
 }
 
-.filter-input-list__input:checked + .filter-input-list__label {
+.filter-input-list__input:checked + .filter-input-list__label--color {
     box-shadow: 0 0 0 4px #E3DFD9, 0 0 0 6px #858176;
     width: 28px;
     height: 28px;
@@ -4071,6 +4072,56 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 /* #endregion */
 
+
+/* #region ================================= 23. SHOWROOM PAGE  ================================= */
+.showroom {
+    padding: 0 0 100px;
+}
+
+.showroom-heaeding {
+    padding: 36px 0 44px;
+}
+
+.showroom-content {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: 40px;
+}
+
+.showroom-map .map {
+    height: 600px;
+    max-height: 600px;
+}
+
+.showroom-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.showroom-info__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.showroom-info__title {
+    font: 600 1.125rem / 1 var(--font-roboto);
+    color: var(--base-color-dark);
+    margin: 0;
+}
+.showroom-info__text {
+    font: 400 1.125rem / 1 var(--font-roboto);
+    color: var(--base-color-dark);
+    margin: 0;
+}
+
+.shop-schedule {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .page-banner {
     padding: 60px 0;
 }
@@ -4438,6 +4489,14 @@ input[type="range"]::-webkit-slider-thumb:active {
         margin: 0;
     }
     /* #endregion */
+
+/* #region ================================= 1220px SHOWROOM ================================= */
+
+    .showroom-content {
+        grid-template-columns: 70% 25%;
+    }
+
+/* #endregion */
 }
 
 @media(max-width: 1110px) {
@@ -4709,6 +4768,12 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
     /* #endregion */
 
+    /* #region ================================= 1024px SHOWROOM ================================= */
+        .showroom-map .map {
+            height: 320px;
+            max-height: 320px;
+        }
+    /* #endregion */
 }
 
 @media(max-width: 767px) {
@@ -5936,6 +6001,23 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     .article-content__text a {
         border-bottom: 1px solid #858176;
+    }
+
+    /* #endregion */
+
+    /* #region ================================= 767 SHOWROOM PAGES  ================================= */
+
+    .showroom-content {
+        grid-template-columns: 1fr;
+    }
+
+    .showroom-map .map {
+        height: 300px;
+        max-height: 300px;
+    }
+
+    .showroom-info {
+        gap: 20px;
     }
 
     /* #endregion */
