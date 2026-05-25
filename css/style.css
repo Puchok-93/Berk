@@ -3990,7 +3990,7 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 .brand-detailed-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(405px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
     margin: 16px 0 0 0;
 }
@@ -4062,7 +4062,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     width: 100%;
     max-width: 830px;
     padding: 17px 0;
-    margin: 0 auto;
+    margin: 20px auto 0;
 }
 
 
@@ -4172,7 +4172,6 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
     /* #endregion */
 
-
     /* #region ================================= 1920px BRAND PAGE ================================= */
 
     .brand-detailed-content {
@@ -4190,7 +4189,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
 
     .brand-detailed-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
     .brand-detailed-gallery__item {
@@ -4397,6 +4396,13 @@ input[type="range"]::-webkit-slider-thumb:active {
     .compare-scroll-btn--right {
         right: 0;
     }
+    /* #endregion */
+
+    /* #region ================================= 1440px BRAND PAGE ================================= */
+    .brand-detailed-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    /* #endregion */
 }
 
 @media(max-width: 1220px) {
@@ -4496,13 +4502,11 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
     /* #endregion */
 
-/* #region ================================= 1220px SHOWROOM ================================= */
+    /* #region ================================= 1220px SHOWROOM ================================= */
 
     .showroom-content {
         grid-template-columns: 70% 25%;
     }
-
-/* #endregion */
 }
 
 @media(max-width: 1110px) {
@@ -4784,6 +4788,22 @@ input[type="range"]::-webkit-slider-thumb:active {
             height: 320px;
         }
 
+    /* #endregion */
+
+    /* #region ================================= 1024px BRAND ================================= */
+
+        .brand-detailed-content {
+            flex-direction: column;
+        }
+
+        .brand-detailed-content .left-column,
+        .brand-detailed-content .right-column {
+            max-width: 100%;
+        }
+
+        .brand-products {
+            padding: 80px 0;
+        }
     /* #endregion */
 }
 
@@ -6034,6 +6054,44 @@ input[type="range"]::-webkit-slider-thumb:active {
     .showroom-info {
         gap: 20px;
     }
+
+    /* #endregion */
+
+    /* #region ================================= 767 BRAND PAGE  ================================= */
+
+
+        .brand-heading {
+            padding: 24px 0;
+        }
+
+        .brand-heading__title {
+            font: 500 2.50rem / 1.1 var(--font-cormorant);
+        }
+
+        .brand-products__title {
+            font: 500 2.50rem / 1.1 var(--font-cormorant);
+        }
+
+        .brand-detailed-info p {
+            font: 400 1rem / 1.4 var(--font-roboto);
+            margin: 0 0 20px;
+        }
+
+        .brand-detailed-info__img {
+            height: 280px;
+        }
+
+        .brand-key-features-list__item {
+            font: 400 1rem / 1.4 var(--font-roboto);
+        }
+
+        .brand-products {
+            padding: 60px 0;
+        }
+
+        .brand-products__btn {
+            margin: 30px auto 0;
+        }
 
     /* #endregion */
 }
