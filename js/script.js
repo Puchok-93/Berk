@@ -813,6 +813,23 @@ function initPersonalMethods() {
     };
 }
 
+function initShowroomMethods() {
+    const showroom = document.getElementById('page-showroom');
+    if(!showroom) return;
+
+    const showroomSlider = new Swiper('#showroom-slider', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next', 
+            prevEl: '.swiper-button-prev', 
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
+        }
+    })
+}
+
 function init() {
     initHeaderMethods();
     initMainPageMethods()
@@ -821,6 +838,7 @@ function init() {
     initBasetMethods();
     initCompareMethods();
     initPersonalMethods();
+    initShowroomMethods();
 }
 
 document.addEventListener('DOMContentLoaded', init);

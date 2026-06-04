@@ -339,6 +339,10 @@ figure {
     margin: 35px 0 0 0;
 }
 
+.swiper-controls--no-mg {
+    margin: 0;
+}
+
 .swiper-controls .swiper-button-next,
 .swiper-controls .swiper-button-prev {
     display: flex;
@@ -348,6 +352,12 @@ figure {
     border-radius: 50%;
     width: 70px;
     height: 70px;
+}
+
+.swiper-controls--medium .swiper-button-next,
+.swiper-controls--medium .swiper-button-prev {
+    width: 50px;
+    height: 50px;
 }
 
 .swiper-controls .swiper-button-next svg,
@@ -2270,7 +2280,8 @@ input[type="range"]::-webkit-slider-thumb:active {
     width: 100%;
 }
 
-.detailed-product-main-gallery .detailed-product-main-gallery-controls {
+.detailed-product-main-gallery .detailed-product-main-gallery-controls,
+.showroom-gallery .showroom-gallery-controls {
     position: absolute;
     top: 50%;
     justify-content: space-between;
@@ -4084,25 +4095,48 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 .showroom-content {
     display: grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 60% 1fr;
     gap: 40px;
 }
 
+.showroom-map {
+    height: 100%;
+    width: 100%;
+}
+
 .showroom-map .map {
-    width: 100%; 
-    height: 600px;
-    max-height: 600px;
+    width: 100%;
+    height: 100%;
+    max-height: none;
 }
 
 .showroom-map .map iframe {
     width: 100%;
-    height: 600px;
+    height: 100%;
 }
+
+/* .showroom-map .map {
+    width: 100%; 
+    height: 600px;
+    max-height: 600px;
+} */
+
+/* .showroom-map .map iframe {
+    width: 100%;
+    height: 600px;
+} */
 
 .showroom-info {
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
+    margin: -3px 0 0 0;
+}
+
+.showroom-info-inner-box {
+    display: flex;
+    gap: 200px;
 }
 
 .showroom-info__item {
@@ -4112,20 +4146,66 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 
 .showroom-info__title {
-    font: 600 1.125rem / 1 var(--font-roboto);
+    font: 600 1.25rem / 1 var(--font-roboto);
     color: var(--base-color-dark);
     margin: 0;
 }
 .showroom-info__text {
-    font: 400 1.125rem / 1 var(--font-roboto);
+    font: 400 1.25rem / 140% var(--font-roboto);
     color: var(--base-color-dark);
     margin: 0;
+}
+
+.showroom-contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    margin: 7px 0 0 0;
+}
+
+.showroom-contacts-list__item {
+    display: flex;
+    align-items: center;
+    font: 400 1.25rem / 1 var(--font-roboto);
+    color: var(--base-color-dark);
+    margin: 0;
+}
+
+.showroom-contacts-list__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    font: 400 1.25rem / 1 var(--font-roboto);
+    color: var(--base-color-dark);
+    margin: 0;
+}
+
+
+.showroom-contacts-list__link-icon,
+.showroom-contacts-list__link-icon svg {
+    width: 40px;
+    height: 40px;
 }
 
 .shop-schedule {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+#showroom-slider {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+#showroom-slider .swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 3px;
 }
 
 .page-banner {
@@ -4206,6 +4286,24 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
 
     /* #endregion */
+
+    /* #region ================================= 1920px SHOWROOM PAGE ================================= */
+    .showroom-content {
+        grid-template-columns: 55.715% 1fr;
+        gap: 20px;
+    }
+
+    .showroom-info-inner-box {
+        width: calc(100% - 117px);
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .showroom-info__item--schedule .showroom-info__text {
+        white-space: nowrap;
+    }
+
+      /* #endregion */
 }
 
 @media(max-width: 1700px) {
@@ -4403,6 +4501,14 @@ input[type="range"]::-webkit-slider-thumb:active {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
     /* #endregion */
+
+
+ /* #region ================================= 1440px SHOWROOM ================================= */
+    .showroom-info-inner-box {
+        width: 100%;
+        gap: 20px;
+    }
+/* #endregion */
 }
 
 @media(max-width: 1220px) {
@@ -4504,8 +4610,8 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     /* #region ================================= 1220px SHOWROOM ================================= */
 
-    .showroom-content {
-        grid-template-columns: 70% 25%;
+    .showroom-info-inner-box {
+        flex-direction: column;
     }
 }
 
@@ -4779,14 +4885,32 @@ input[type="range"]::-webkit-slider-thumb:active {
     /* #endregion */
 
     /* #region ================================= 1024px SHOWROOM ================================= */
-        .showroom-map .map {
-            height: 320px;
-            max-height: 320px;
-        }
+    #showroom-slider {
+        height: auto;
+        padding: 0 0 20px;
+    }
 
-        .showroom-map .map iframe {
-            height: 320px;
-        }
+
+    .showroom-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .showroom-map .map {
+        height: 320px;
+        max-height: 320px;
+    }
+
+    .showroom-map .map iframe {
+        height: 320px;
+    }
+
+    #showroom-slider .swiper-slide img {
+        display: block;
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+    }
 
     /* #endregion */
 
@@ -6038,8 +6162,29 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     /* #region ================================= 767 SHOWROOM PAGES  ================================= */
 
+    .showroom-heaeding {
+        padding: 24px 0;
+    }
+
     .showroom-content {
         grid-template-columns: 1fr;
+    }
+
+    .showroom-info__title {
+        font: 600 1.125rem / 1 var(--font-roboto);
+    }
+
+    .showroom-info__text {
+        font: 400 1.125rem / 140% var(--font-roboto);
+    }
+
+    .showroom-contacts-list__link {
+        font: 400 1.125rem / 1 var(--font-roboto);
+    }
+
+    .showroom-contacts-list__link-icon, .showroom-contacts-list__link-icon svg {
+        width: 30px;
+        height: 30px;
     }
 
     .showroom-map .map {

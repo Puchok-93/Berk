@@ -294,29 +294,98 @@
                 </div>
 
                 <div class="showroom-content">
-                    <div class="showroom-map">
-                        <div class="map">
-                                <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.0415873769675!2d55.16691667608008!3d25.10045353561111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b24d6841ee5%3A0xe1f132c3d35a97b2!2sDr.Head!5e0!3m2!1sen!2skz!4v1742198439589!5m2!1sen!2skz" 
-                                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="showroom-gallery">
+                        <div id="showroom-slider" class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="img/showroom/showroom-1.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/showroom/showroom-2.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/showroom/showroom-3.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/showroom/showroom-4.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/showroom/showroom-5.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/showroom/showroom-6.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="img/showroom/showroom-7.jpg" alt="">
+                                </div>
                             </div>
+                            <div class="swiper-controls swiper-controls--medium swiper-controls--no-mg  showroom-gallery-controls">
+                                <div class="showroom-gallery-controls__control swiper-button-next">
+                                    <svg class="showroom-gallery-controls__icon icon" viewBox="0 0 24 24">
+                                        <use xlink:href="img/sprite.svg#slider-arrow-next"></use>
+                                    </svg>
+                                </div>
+                                <div class="showroom-gallery-controls__control swiper-button-prev">
+                                    <svg class="showroom-gallery-controls__icon icon" viewBox="0 0 24 24">
+                                        <use xlink:href="img/sprite.svg#slider-arrow-prev"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
                     </div>
                     <div class="showroom-info">
                         <div class="showroom-info__item showroom-info__item--address">
                             <p class="showroom-info__title">Address</p>
-                            <p class="showroom-info__text"> Business Central Towers - B,<br>B1 Shop 3 - Al Sufouh - Dubai Internet City </p>
+                            <p class="showroom-info__text"> Business Central Towers - B,<br>B1 Shop 3 - Al Sufouh - Dubai Internet City<br>Shop Dr.Head</p>
                         </div>
-                        <div class="showroom-info__item showroom-info__item--contacts">
-                            <p class="showroom-info__title">Contacts</p>
-                            <p class="showroom-info__text">
-                                <a class="link" href="tel:+97142808581">+9 (714)280-85-81</a>
-                            </p>
+                        <div class="showroom-info-inner-box">
+                            <div class="showroom-info__item showroom-info__item--contacts">
+                                <p class="showroom-info__title">Contacts</p>
+                                <ul class="showroom-contacts-list">
+                                    <li class="showroom-contacts-list__item">
+                                        <a class="showroom-contacts-list__link link" href="tel:+97142808581">
+                                            <span class="showroom-contacts-list__link-icon">
+                                                <svg class="icon" viewBox="0 0 24 24">
+                                                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                </svg>
+                                            </span>+9 (714)280-85-81</a>
+                                    </li>
+                                    <li class="showroom-contacts-list__item">
+                                        <a class="showroom-contacts-list__link link" href="tel:+97142808581">
+                                            <span class="showroom-contacts-list__link-icon">
+                                                <svg class="icon" viewBox="0 0 24 24">
+                                                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                                                </svg>
+                                            </span>+9 (714)280-85-81</a>
+                                    </li>
+                                    <li class="showroom-contacts-list__item">
+                                        <a class="showroom-contacts-list__link link" href="tel:+97142808581">
+                                            <span class="showroom-contacts-list__link-icon">
+                                                <svg class="icon" viewBox="0 0 24 24">
+                                                    <use xlink:href="img/sprite.svg#icon-whats-up"></use>
+                                                </svg>
+                                            </span>+9 (714)280-85-81</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="showroom-info__item showroom-info__item--schedule">
+                                <p class="showroom-info__title">Work Schedule</p>
+                                <div class="shop-schedule">
+                                    <p class="showroom-info__text">Daily</p>
+                                    <p class="showroom-info__text">from 10:00 to 22:00</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="showroom-info__item showroom-info__item--schedule">
-                            <p class="showroom-info__title">Work Schedule</p>
-                            <div class="shop-schedule">
-                                <p class="showroom-info__text">Daily</p>
-                                <p class="showroom-info__text">from 10:00 to 22:00</p>
+                        <div class="showroom-map">
+                            <div class="map">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.0415873769675!2d55.16691667608008!3d25.10045353561111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b24d6841ee5%3A0xe1f132c3d35a97b2!2sDr.Head!5e0!3m2!1sen!2skz!4v1742198439589!5m2!1sen!2skz" 
+                                    style="border:0;" 
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
                             </div>
                         </div>
                     </div>
