@@ -399,7 +399,7 @@ figure {
 .header {
     position: relative;
     z-index: 10;
-    padding: 52px 0 0;
+    padding: 22px 0;
 }
 
 .header-content {
@@ -1068,9 +1068,9 @@ figure {
 
 .main-screen {
     position: relative;
-    background-color: var(--base-color-soft-beige); /* мягкий бежевый */
-    padding: 233px 0 146px;
-    margin: -143px 0 121px 0;
+    /* background-color: var(--base-color-soft-beige); мягкий бежевый */
+    padding: 0;
+    margin: 0;
 }
 
 .main-screen__title {
@@ -1112,6 +1112,70 @@ figure {
     margin: 0 0 0 -17px;
 }
 
+/* MAIN SCREEN NEW */
+.main-screen-slide-content {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+.main-screen-slide__info {
+    background-color: var(--base-color-soft-beige);
+    padding: 50px;
+}
+
+.main-screen-slide-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 62.65% 38%;
+}
+
+.main-screen-slide__img img {
+    height: 100%;
+    max-height: 672px;
+    object-fit: cover;
+}
+
+.main-screen-slide__info {
+    max-height: 672px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    background-color: var(--base-color-soft-beige);
+}
+
+.main-screen-slide__text {
+    display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font: 400 1.25rem / 1.4 var(--font-roboto);
+    color: var(--base-color-dark);
+    padding: 0 50px;
+    margin: 0;
+}
+
+.swiper-controls.main-screen-slider-controls {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    width: 62.65%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin: 0;
+}
+
+.main-screen-slider-controls .main-screen-slider-controls__control {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+
+.main-screen-slider-controls {}
+
 /* #endregion */
 
 /* #endregion */
@@ -1120,6 +1184,10 @@ figure {
     /* ================================ ABOUT COMPANY CONTENTS 7.1 About Company ================================ */
 
 /* #region ======== 7.1 About Company ======== */
+.about-company-section {
+    padding: 120px 0 0;
+}
+
 .about-company-content {
     display: grid;
     grid-template-columns: 35% 63%;
@@ -3953,7 +4021,6 @@ input[type="range"]::-webkit-slider-thumb:active {
 }
 /* #endregion */
 
-
 /* #region ================================= 22. BRAND PAGE  ================================= */
 
 .brand-heading {
@@ -4083,7 +4150,6 @@ input[type="range"]::-webkit-slider-thumb:active {
 
 /* #endregion */
 
-
 /* #region ================================= 23. SHOWROOM PAGE  ================================= */
 .showroom {
     padding: 0 0 100px;
@@ -4180,7 +4246,6 @@ input[type="range"]::-webkit-slider-thumb:active {
     color: var(--base-color-dark);
     margin: 0;
 }
-
 
 .showroom-contacts-list__link-icon,
 .showroom-contacts-list__link-icon svg {
@@ -4362,6 +4427,14 @@ input[type="range"]::-webkit-slider-thumb:active {
 
     .main-screen-content-info {
         max-width: 350px;
+    }
+
+    /* NEw */
+
+    .main-screen-slide__text {
+        max-height: 112px;
+        overflow: hidden;
+        padding: 0;
     }
 
     /* #endregion */
@@ -4654,9 +4727,6 @@ input[type="range"]::-webkit-slider-thumb:active {
     /* #endregion */
 
     /* #region ================================= 1024px HEADER ================================= */
-    .header {
-        padding: 45px 0 0;
-    }
 
     .header-logo {
         width: 50px;
@@ -4725,11 +4795,6 @@ input[type="range"]::-webkit-slider-thumb:active {
         content: none;
     }
 
-    .main-screen {
-        padding: 172px 0 83px;
-        margin: -143px 0 80px 0;
-    }
-
     .main-screen__title {
         font: 400 64px/1 var(--font-cormorant);
         text-align: left;
@@ -4760,6 +4825,10 @@ input[type="range"]::-webkit-slider-thumb:active {
     /* #endregion */
 
     /* #region ================================= 1024px ABOUT COMPANY ================================= */
+    .about-company-section {
+        padding: 60px 0 0;
+    }
+
     .about-company-content {
         flex-direction: column;
         gap: 50px;
@@ -4970,9 +5039,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     /* #endregion */
 
     /* #region ================================= 767px HEADER ================================= */
-    .header {
-        padding: 32px 0 0;
-    }
+
 
     .header-content {
         height: 39px;
@@ -5155,10 +5222,6 @@ input[type="range"]::-webkit-slider-thumb:active {
     /* #endregion */
 
     /* #region ================================= 767px MAIN SCREEN ================================= */
-    .main-screen {
-        padding: 191px 0 73px;
-        margin: -143px 0 0 0;
-    }
 
     .main-screen-content {
         display: flex;

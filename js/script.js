@@ -133,6 +133,20 @@ function initHeaderMethods(){
 }
 
 function initMainPageMethods() {
+    function initMainScreenSlider() {
+        const mainScreenSlider = document.getElementById('main-screen-slider');
+        if(!mainScreenSlider) return;
+
+        const swiper = new Swiper(mainScreenSlider, {
+            loop: true,
+            effect: 'fade',
+            navigation: {
+                nextEl: '.main-screen-slider-controls .swiper-button-next', 
+                prevEl: '.main-screen-slider-controls .swiper-button-prev', 
+            },
+        });
+    }
+
     function initReviewSlider() {
         const reviewSlider = document.getElementById('reviews-slider');
         if(!reviewSlider) return;
@@ -180,6 +194,7 @@ function initMainPageMethods() {
 
     initReviewSlider();
     initNewsSlider();
+    initMainScreenSlider();
 }
 
 function initCatalogMethods() {
