@@ -144,6 +144,10 @@ function initMainPageMethods() {
                 nextEl: '.main-screen-slider-controls .swiper-button-next', 
                 prevEl: '.main-screen-slider-controls .swiper-button-prev', 
             },
+            scrollbar: {
+                el: '.main-screen .swiper-scrollbar',
+                hide: false,
+            }
         });
     }
 

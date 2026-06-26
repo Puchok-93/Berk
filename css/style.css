@@ -633,7 +633,7 @@ figure {
     left: 0;
     z-index: 12;
     width: 100%;
-    padding: 52px 120px;
+    padding: 22px 120px;
 }
 
 .header-menu.js-is-open {
@@ -1071,6 +1071,10 @@ figure {
     /* background-color: var(--base-color-soft-beige); мягкий бежевый */
     padding: 0;
     margin: 0;
+}
+
+.main-screen .wrapper {
+    padding: 0;
 }
 
 .main-screen__title {
@@ -4391,7 +4395,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     /* #region ================================= 1440px HEADER ================================= */
     
     .header-menu {
-        padding: 52px 60px;
+        padding: 22px 60px;
     }
     /* #endregion */
 
@@ -4632,7 +4636,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
 
     .header-menu {
-        padding: 52px 30px;
+        padding: 22px 30px;
     }
 
     .header-brand {
@@ -4706,6 +4710,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
 
     .section-text {
+        font: 400 1.125rem / 1.4 var(--font-roboto);
         margin: 0;
     }
 
@@ -4822,6 +4827,33 @@ input[type="range"]::-webkit-slider-thumb:active {
         top: 166px;
         transform: translate(0, 0);
     }
+
+    .main-screen-slide-content {
+        grid-template-columns: 50% 50%;
+    }
+
+    .main-screen-slide__link.catalog-link::before {
+        width: 50px;
+        height: 50px;
+        top: 4px;
+        right: -2px;
+    }
+
+    .swiper-controls.main-screen-slider-controls {
+        display: none;
+    }
+
+    #main-screen-slider .swiper-scrollbar {
+        width: calc(50% - 40px);
+        bottom: 12px;
+        left: 20px;
+    }
+
+    .main-screen-slide__text,
+    .main-screen-slide__link {
+        font: 400 1.125rem / 1.4 var(--font-roboto);
+    }
+    
     /* #endregion */
 
     /* #region ================================= 1024px ABOUT COMPANY ================================= */
@@ -4841,6 +4873,10 @@ input[type="range"]::-webkit-slider-thumb:active {
         gap: 50px;
         padding: 0;
     }
+
+    .about-company-image {
+        margin: 0;
+    }
     /* #endregion */
 
     /* #region ================================= 1024px POPULAR PRODUCTS ================================= */
@@ -4852,6 +4888,10 @@ input[type="range"]::-webkit-slider-thumb:active {
     .popular-products-catalog-link {
         right: 10%;
         transform: translate(10%, 0);
+    }
+
+    .product-card__title {
+        font: 400 1.125rem / 1.4 var(--font-roboto);
     }
     /* #endregion */
 
@@ -4998,6 +5038,20 @@ input[type="range"]::-webkit-slider-thumb:active {
             padding: 80px 0;
         }
     /* #endregion */
+
+
+    /* #region ================================= 1024px REVIEW ================================= */
+
+
+    .review__user-text {
+        font: 400 1.125rem / 1.4 var(--font-roboto);
+    }
+
+    /* #region ================================= 1024px MANUFACTURE ================================= */
+
+    .manufacture-content-column__text {
+        font: 400 1.125rem / 1.4 var(--font-roboto);
+    }
 }
 
 @media(max-width: 767px) {
@@ -5252,6 +5306,50 @@ input[type="range"]::-webkit-slider-thumb:active {
         top: auto;
         bottom: 161px;
         transform: translate(50%, 0);
+    }
+
+    .main-screen-slide-content {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .main-screen-slide__info {
+        gap: 20px;
+        padding: 34px 35px 116px;
+        margin: -5px 0 0;
+    }
+
+    .main-screen-slide__text {
+        font: 400 1rem / 1.2 var(--font-roboto);
+        text-align: center;
+    }
+
+    .main-screen-slide__link {
+        font: 400 1.125rem / 1.2 var(--font-roboto);
+        padding: 0 60px 0 0;
+    }
+
+    .main-screen-slide__link.catalog-link::before {
+        width: 60px;
+        height: 60px;
+        top: -4px;
+        right: 25px;
+    }
+
+    .main-screen-slide__link.catalog-link .catalog-link__icon {
+        position: absolute;
+        width: 100%;
+        max-width: 209px;
+        left: 24px;
+        top: 21px;
+        z-index: 2;
+    }
+
+    #main-screen-slider .swiper-scrollbar {
+        width: calc(102% - 40px);
+        bottom: 60px;
+        left: 16px;
     }
     /* #endregion */
 
