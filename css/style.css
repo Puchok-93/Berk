@@ -1178,7 +1178,9 @@ figure {
     margin: 0;
 }
 
-.main-screen-slider-controls {}
+    #main-screen-slider .swiper-scrollbar {
+        display: none;
+    }
 
 /* #endregion */
 
@@ -4844,6 +4846,7 @@ input[type="range"]::-webkit-slider-thumb:active {
     }
 
     #main-screen-slider .swiper-scrollbar {
+        display: block;
         width: calc(50% - 40px);
         bottom: 12px;
         left: 20px;
